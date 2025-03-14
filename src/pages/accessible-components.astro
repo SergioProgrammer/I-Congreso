@@ -1,0 +1,311 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import { Icon } from 'astro-icon/components'
+import {
+  Accordion,
+  AccordionItem,
+  Breadcrumbs,
+  BreadcrumbsItem,
+  Card,
+  Media,
+  Modal,
+  Notification,
+  Pagination,
+  Tabs,
+  TabsList,
+  TabsTab,
+  TabsPanel,
+  Video,
+} from 'accessible-astro-components'
+---
+
+<DefaultLayout title="Accessible Componssssents">
+  <section class="my-12">
+    <div class="space-content container">
+      <h1>¿Dónde tendrá lugar?</h1>
+      <p class="text-2xl">
+        This theme has a lot of extra ssa11y components provided by the <a
+          href="https://github.com/markteekman/accessible-astro-components">Accessible Astro Components</a
+        > NPM package to help you build accessible pages faster. To learn more about the components and how to use them,
+        checkout our <a href="https://accessible-astro.incluud.dev/">documentation website</a>.
+      </p>
+    </div>
+  </section>
+  <section class="mb-12 mt-32">
+    <div class="container">
+      <div class="grid grid-cols-1 gap-32 md:grid-cols-2">
+        <div class="space-content">
+          <h2>Accordion (default)</h2>
+          <Accordion>
+            <AccordionItem title="First Item">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo
+                accusantium debitis <a href="#">sapiente obcaecati</a> magnam incidunt sit. Molestiae exercitationem quibusdam
+                quod veritatis laboriosam est tenetur.
+              </p>
+              <a href="#">Tab to me!</a>
+            </AccordionItem>
+            <AccordionItem title="Second Item">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo
+                accusantium debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod
+                veritatis laboriosam est tenetur.
+              </p>
+            </AccordionItem>
+            <AccordionItem title="Third Item">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo
+                accusantium debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod
+                veritatis laboriosam est tenetur.
+              </p>
+            </AccordionItem>
+            <AccordionItem title="Fourth Item">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo
+                accusantium debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod
+                veritatis laboriosam est tenetur.
+              </p>
+            </AccordionItem>
+            <AccordionItem title="Fifth Item">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo
+                accusantium debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod
+                veritatis laboriosam est tenetur.
+              </p>
+            </AccordionItem>
+          </Accordion>
+        </div>
+        <div class="space-content">
+          <h2>Accordion (chevron)</h2>
+          <Accordion>
+            <AccordionItem name="exclusive" title="First Item" variant="chevron">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo
+                accusantium debitis <a href="#">sapiente obcaecati</a> magnam incidunt sit. Molestiae exercitationem quibusdam
+                quod veritatis laboriosam est tenetur.
+              </p>
+              <a href="#">Tab to me!</a>
+            </AccordionItem>
+            <AccordionItem name="exclusive" title="Second Item" variant="chevron">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo
+                accusantium debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod
+                veritatis laboriosam est tenetur.
+              </p>
+            </AccordionItem>
+            <AccordionItem name="exclusive" title="Third Item" variant="chevron">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo
+                accusantium debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod
+                veritatis laboriosam est tenetur.
+              </p>
+            </AccordionItem>
+            <AccordionItem name="exclusive" title="Fourth Item" variant="chevron">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo
+                accusantium debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod
+                veritatis laboriosam est tenetur.
+              </p>
+            </AccordionItem>
+            <AccordionItem name="exclusive" title="Fifth Item" variant="chevron">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo
+                accusantium debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod
+                veritatis laboriosam est tenetur.
+              </p>
+            </AccordionItem>
+          </Accordion>
+        </div>
+        <div class="space-content">
+          <h2>Breadcrumbs</h2>
+          <Breadcrumbs>
+            <BreadcrumbsItem href="/" label="Home" />
+            <BreadcrumbsItem href="/blog" label="Blog" />
+            <BreadcrumbsItem currentPage={true} label="My blog post" />
+          </Breadcrumbs>
+          <Breadcrumbs>
+            <BreadcrumbsItem href="/" label="Home" hasIcon>
+              <Icon name="ion:home" slot="icon" />
+            </BreadcrumbsItem>
+            <BreadcrumbsItem href="/docs" label="Documentation" />
+            <BreadcrumbsItem label="Breadcrumbs" currentPage={true} />
+          </Breadcrumbs>
+          <Breadcrumbs>
+            <BreadcrumbsItem href="/" label="Home">
+              <span slot="separator" class="separator" aria-hidden="true">
+                <Icon name="ion:chevron-forward-outline" />
+              </span>
+            </BreadcrumbsItem>
+            <BreadcrumbsItem href="/docs" label="Documentation">
+              <span slot="separator" class="separator" aria-hidden="true">
+                <Icon name="ion:chevron-forward-outline" />
+              </span>
+            </BreadcrumbsItem>
+            <BreadcrumbsItem label="Breadcrumbs" currentPage={true} />
+          </Breadcrumbs>
+          <Breadcrumbs>
+            <BreadcrumbsItem href="/" label="Home" hasIcon>
+              <Icon name="ion:home" slot="icon" />
+              <span slot="separator" class="separator" aria-hidden="true">
+                <Icon name="ion:chevron-forward-outline" />
+              </span>
+            </BreadcrumbsItem>
+            <BreadcrumbsItem href="/docs" label="Documentation">
+              <span slot="separator" class="separator" aria-hidden="true">
+                <Icon name="ion:chevron-forward-outline" />
+              </span>
+            </BreadcrumbsItem>
+            <BreadcrumbsItem label="Breadcrumbs" currentPage={true} />
+          </Breadcrumbs>
+        </div>
+        <div class="space-content">
+          <h2>Cards</h2>
+          <Card
+            img="https://images.unsplash.com/photo-1620428268482-cf1851a36764?auto=format&fit=crop&q=80&w=800"
+            title="Card Title"
+            footer="Author name"
+          >
+            <span slot="meta">
+              <Icon name="ion:time-outline" />
+              10 min read
+            </span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo accusantium
+            debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod veritatis laboriosam
+            est tenetur.
+          </Card>
+        </div>
+        <div class="space-content">
+          <h2>DarkMode Toggle</h2>
+          <p>This component can be viewed in the top right corner besides the main navigation.</p>
+        </div>
+        <div class="space-content">
+          <h2>Media</h2>
+          <Media
+            class="rounded-lg"
+            src="https://images.unsplash.com/photo-1620428268482-cf1851a36764?auto=format&fit=crop&q=80&w=800"
+          />
+        </div>
+        <div class="space-content">
+          <h2>Modals</h2>
+          <button id="modal1-trigger" class="button">Modal 1</button>&nbsp;
+          <button id="modal2-trigger" class="button color-secondary">Modal 2</button>
+          <Modal triggerId="modal1-trigger" title="Modal 1">
+            <p>Why hello, I be the <strong>first</strong> Modal.</p>
+          </Modal>
+          <Modal triggerId="modal2-trigger" title="Modal 2" closeText="Close Modal">
+            <p>
+              Ah yes, and I be the <strong>second</strong> Modal. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Sed, a! Ratione eaque temporibus alias tempora pariatur dolorem.
+            </p>
+            <button class="button" onclick="closeModal()">Confirm action</button>
+          </Modal>
+        </div>
+        <div class="space-content">
+          <h2>Notification</h2>
+          <Notification>
+            <Icon name="ion:notifications-outline" /><p><strong>Message:</strong> This is a notification!</p>
+          </Notification>
+          <Notification role="status" type="info">
+            <Icon name="ion:information-circle-outline" /><p>
+              <strong>Info:</strong> This is a notification of type info.
+            </p>
+          </Notification>
+          <Notification role="status" type="success">
+            <Icon name="ion:checkbox-outline" /><p>
+              <strong>Success:</strong> This is a notification of type success.
+            </p>
+          </Notification>
+          <Notification role="status" type="warning">
+            <Icon name="ion:warning-outline" /><p>
+              <strong>Warning:</strong> This is a notification of type warning and goes on multiple lines to see how that
+              looks.
+            </p>
+          </Notification>
+          <Notification role="alert" type="error">
+            <Icon name="ion:alert-circle-outline" /><p>
+              <strong>Error:</strong> This is a notification of type error.
+            </p>
+          </Notification>
+        </div>
+        <div class="space-content">
+          <h2>Pagination</h2>
+          <Pagination totalPages="200" />
+        </div>
+        <div class="space-content">
+          <h2>SkipLinks</h2>
+          <p>This component can be viewed by shift+tabbing until they show up.</p>
+        </div>
+      </div>
+      <div class="my-32"></div>
+      <div class="space-content">
+        <h2>Tabs</h2>
+        <Tabs>
+          <TabsList>
+            <TabsTab id="tab-1" controls="panel-1" selected>First Panel</TabsTab>
+            <TabsTab id="tab-2" controls="panel-2">Second Panel</TabsTab>
+            <TabsTab id="tab-3" controls="panel-3">Third Panel</TabsTab>
+          </TabsList>
+
+          <TabsPanel id="panel-1" labelledby="tab-1" selected>
+            <h3>First Panel</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo
+              accusantium debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod
+              veritatis laboriosam est tenetur. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed eveniet
+              quidem earum at nobis enim.
+            </p>
+            <a href="#">Tab to me!</a>
+          </TabsPanel>
+          <TabsPanel id="panel-2" labelledby="tab-2">
+            <h3>Second Panel</h3>
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+              <Media
+                class="rounded-lg"
+                src="https://images.unsplash.com/photo-1636819488537-a9b1ffb315ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
+              />
+              <Media
+                class="rounded-lg"
+                src="https://images.unsplash.com/photo-1636819488537-a9b1ffb315ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
+              />
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quasi nobis optio? Qui in quo
+              accusantium debitis sapiente obcaecati magnam incidunt sit. Molestiae exercitationem quibusdam quod
+              veritatis laboriosam est tenetur. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed eveniet
+              quidem earum at nobis enim.
+            </p>
+            <a href="#">Tab to me!</a>
+          </TabsPanel>
+          <TabsPanel id="panel-3" labelledby="tab-3">
+            <h3>Third Panel</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, nulla! Sapiente saepe voluptate nemo in
+              id aperiam tempore quo unde, ipsum similique explicabo non maiores qui voluptates dolore obcaecati. Atque
+              voluptates similique ad ipsam nostrum quibusdam doloremque cum porro, aperiam beatae voluptas dolore et
+              neque voluptate alias nesciunt blanditiis totam voluptatem necessitatibus. Similique aliquid molestiae
+              iusto nam nobis ut aspernatur blanditiis provident iste corporis minima, quidem autem nulla doloremque
+              eaque a obcaecati! Nisi quod quam repellendus facilis? Libero voluptas doloribus maxime, suscipit odio
+              veritatis optio nulla officia quos cum at ea hic numquam perferendis molestiae! Aperiam quia veritatis
+              earum tempora.
+            </p>
+            <a href="#">Tab to me!</a>
+          </TabsPanel>
+        </Tabs>
+      </div>
+    </div>
+  </section>
+  <section class="mb-12 mt-32">
+    <div class="container">
+      <div class="grid grid-cols-1 gap-32 md:grid-cols-2">
+        <div class="space-content">
+          <h2>Video (default)</h2>
+          <Video src="https://www.youtube.com/watch?v=j8K-ESJF814" title="Video" />
+        </div>
+        <div class="space-content">
+          <h2>Video (aspect ratio)</h2>
+          <Video src="https://www.youtube.com/watch?v=j8K-ESJF814" title="Video" ratio="1:1" />
+        </div>
+      </div>
+    </div>
+  </section>
+</DefaultLayout>

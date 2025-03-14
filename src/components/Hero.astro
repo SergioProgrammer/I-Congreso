@@ -1,0 +1,88 @@
+---
+import { Icon } from 'astro-icon/components'
+
+const { src = '/hero.PNG' } = Astro.props
+---
+
+<section class="hero my-24">
+  <div class="container">
+    <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
+      <div class="flex flex-col items-center gap-8 md:items-start">
+        <h1 class="text-center text-2xl md:text-left lg:text-7xl">
+          <slot><span class="text-gradient">I Congreso Internacional</span>  Sordera, Discapacidad Auditiva y Sordoceguera: Avances, Retos y Futuro</slot>
+        </h1>
+        <div class="flex flex-col gap-3 min-[500px]:flex-row mt-8"> 
+          <a class="button has-icon" href="https://www.instagram.com/catedradiscapacidadauditiva/">
+            <Icon name="ion:heart-outline" />
+            Síguenos en Redes Sociales
+          </a>
+          <a class="button has-icon color-secondary" href="https://accessible-astro.incluud.dev/">
+            <Icon name="ion:bookmark-outline" />
+            Documento oficial
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-col items-center mb-1">
+        <img class="hidden lg:block" src={src} alt="" decoding="async" />
+        <div class="text-center text-black mt-6 ml-5">
+          <h2 class="text-3xl">Cuenta atrás para el Congreso</h2>
+          <div id="countdown" class="text-2xl mt-1 mb-6"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .text-gradient {
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-500));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  :global(.darkmode .text-gradient) {
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-400));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .button {
+    background-color: #7604b7; 
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .button.color-secondary {
+    background-color: #7604b7; 
+  }
+</style>
+
+<script>
+  function updateCountdown() {
+    const eventDate = new Date('October 7, 2025 00:00:00').getTime();
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById('countdown').textContent = `${days} días ${hours} horas ${minutes} minutos ${seconds} segundos`;
+
+    if (distance < 0) {
+      clearInterval(countdownInterval);
+      document.getElementById('countdown').textContent = '¡El evento ha comenzado!';
+    }
+  }
+
+  const countdownInterval = setInterval(updateCountdown, 1000);
+  updateCountdown();
+</script>

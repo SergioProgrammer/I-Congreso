@@ -1,0 +1,37 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+---
+
+<DefaultLayout title="Patrocinadores">
+  <section class="my-24">
+    <div class="container">
+      <h1 class="text-6xl text-center mb-16">Patrocinadores</h1>
+      <div class="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+        <!-- Imágenes -->
+        {Array.from({ length: 21 }, (_, i) => (
+          <div class="sponsor-card">
+            <img src={`/img/image${i + 1}.png`} alt={`Patrocinador ${i + 1}`} class="sponsor-logo" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</DefaultLayout>
+
+<style lang="scss">
+  .sponsor-card {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .sponsor-logo {
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+</style>

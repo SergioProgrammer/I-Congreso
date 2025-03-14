@@ -1,0 +1,124 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+
+---
+<DefaultLayout title="Home">
+    
+    
+    <section class="inscription-section">
+      <div class="container">
+        <div class="inscription-box">
+          <h2 class="inscription-title">📢 ¡Inscripciones Abiertas!</h2>
+          <p class="inscription-text">
+            Forma parte del Primer congreso internacional de Sordera, Discapacidad Auditiva y Sordoceguera. Realiza tu inscripción siguiendo estos pasos:
+          </p>
+    
+          <div class="prices">
+            <div class="price-card">
+              <h3>🎓 Estudiantes Universitarios</h3>
+              <p class="price">20€</p>
+            </div>
+            <div class="price-card">
+              <h3>🌍 Público General</h3>
+              <p class="price">80€</p>
+            </div>
+          </div>
+    
+          <p class="inscription-instructions">
+            📌 Para inscribirte, realiza una transferencia bancaria y en el concepto incluye tu <b>nombre completo y DNI</b> y manda una captura al correo <b>catavs@ull.edu.es</b>
+          </p>
+    
+          <div class="bank-details">
+            <p><strong>💳 Cuenta Bancaria:</strong> ES00 0000 0000 0000 0000 0000</p>
+            <p><strong>📅 Plazo límite:</strong> 5 de Octubre de 2025</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <style lang="scss">
+      .inscription-section {
+        background: linear-gradient(135deg, #6a11cb, #590086);
+        padding: 60px 20px;
+        text-align: center;
+      }
+    
+      .inscription-box {
+        background: white;
+        max-width: 700px;
+        margin: auto;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+    
+      .inscription-title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #333;
+      }
+    
+      .inscription-text {
+        font-size: 1.2rem;
+        color: #555;
+        margin-bottom: 25px;
+      }
+    
+      .prices {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 20px;
+      }
+    
+      .price-card {
+        background: #f4f4f4;
+        padding: 15px 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    
+      .price-card h3 {
+        margin: 0;
+        font-size: 1.1rem;
+        color: #222;
+      }
+    
+      .price {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #6a11cb;
+      }
+    
+      .inscription-instructions {
+        font-size: 1.1rem;
+        color: #444;
+        margin-bottom: 15px;
+      }
+    
+      .bank-details {
+        background: #f9f9f9;
+        padding: 15px;
+        border-radius: 8px;
+        font-size: 1rem;
+        color: #333;
+        margin-bottom: 20px;
+      }
+    
+      .inscription-button {
+        background: #6a11cb;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+    
+      .inscription-button:hover {
+        background: #7300a9;
+      }
+    </style>
+</DefaultLayout>
