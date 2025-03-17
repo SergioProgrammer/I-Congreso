@@ -11,25 +11,15 @@
     "build": "astro build",
     "preview": "astro preview"
   },
-  "keywords": [
-    "astro",
-    "astro-component",
-    "astro-components",
-    "accessible",
-    "accessibility",
-    "a11y",
-    "wcag",
-    "responsive",
-    "ui-library",
-    "ui-components",
-    "blog"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/incluud/accessible-astro-starter.git"
-  },
-  "bugs": {
-    "url": "https://github.com/incluud/accessible-astro-starter/issues"
+  "type": "module",
+  "dependencies": {
+    "@stripe/stripe-js": "^6.0.0",
+    "accessible-astro-components": "^4.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "stripe": "^17.7.0",
+    "swiper": "^11.2.5"
   },
   "devDependencies": {
     "@astrojs/mdx": "^4.0.8",
@@ -53,8 +43,24 @@
     "svgo": "^3.3.2",
     "tailwindcss": "^3.4.15"
   },
-  "dependencies": {
-    "accessible-astro-components": "^4.0.2",
-    "swiper": "^11.2.5"
+  "keywords": [
+    "astro",
+    "astro-component",
+    "astro-components",
+    "accessible",
+    "accessibility",
+    "a11y",
+    "wcag",
+    "responsive",
+    "ui-library",
+    "ui-components",
+    "blog"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/incluud/accessible-astro-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/incluud/accessible-astro-starter/issues"
   }
 }
