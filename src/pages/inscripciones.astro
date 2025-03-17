@@ -1,36 +1,5 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro';
-import { loadStripe } from "@stripe/stripe-js";
-
-const stripePromise = loadStripe("pk_test_XXXXXXXXXXXXXXXXXXXXXXXX");
-
-async function handleCheckout() {
-  try {
-    const stripe = await stripePromise;
-    
-    const response = await fetch("http://localhost:5050/create-checkout-session", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        items: [{ id: "producto_1", price: 1000, quantity: 1 }] // El precio debe ser en centavos
-      })
-    });
-
-    if (!response.ok) {
-      throw new Error("Error al crear la sesión de pago.");
-    }
-
-    const session = await response.json();
-    if (!session.id) {
-      throw new Error("Error: La sesión no tiene ID.");
-    }
-
-    await stripe.redirectToCheckout({ sessionId: session.id });
-  } catch (error) {
-    console.error("Error en el pago:", error);
-    alert("Hubo un problema al procesar el pago. Inténtalo de nuevo.");
-  }
-}
 ---
 
 <DefaultLayout title="Inscripciones">
@@ -41,7 +10,6 @@ async function handleCheckout() {
         <p class="inscription-text">
           Forma parte del Primer congreso internacional de Sordera, Discapacidad Auditiva y Sordoceguera. Realiza tu inscripción siguiendo estos pasos:
         </p>
-        <button class="inscription-button" onClick={handleCheckout}>Pagar</button>
         <div class="prices">
           <div class="price-card">
             <h3>🎓 Estudiantes Universitarios</h3>
@@ -63,41 +31,6 @@ async function handleCheckout() {
     </div>
   </section>
 </DefaultLayout>
-
-<script>
-  import { loadStripe } from "@stripe/stripe-js";
-
-  const stripePromise = loadStripe("pk_test_XXXXXXXXXXXXXXXXXXXXXXXX");
-
-  async function handleCheckout() {
-    try {
-      const stripe = await stripePromise;
-      const response = await fetch("http://localhost:5050/create-checkout-session", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          items: [{ id: "producto_1", price: 1000, quantity: 1 }]
-        })
-      });
-
-      if (!response.ok) {
-        throw new Error("Error al crear la sesión de pago.");
-      }
-
-      const session = await response.json();
-      if (!session.id) {
-        throw new Error("Error: La sesión no tiene ID.");
-      }
-
-      await stripe.redirectToCheckout({ sessionId: session.id });
-    } catch (error) {
-      console.error("Error en el pago:", error);
-      alert("Hubo un problema al procesar el pago. Inténtalo de nuevo.");
-    }
-  }
-
-  document.querySelector('.inscription-button').addEventListener('click', handleCheckout);
-</script>
 
 <style lang="scss">
   .inscription-section {
