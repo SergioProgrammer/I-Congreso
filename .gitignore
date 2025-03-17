@@ -28,3 +28,6 @@ package-lock.json
 
 # astro build files
 .astro
+
+# .gitignore
+.env
