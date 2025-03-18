@@ -19,18 +19,38 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
         </p>
   
         <div class="prices">
-          <div class="price-card">
-            <h3>🎓 Estudiantes Universitarios</h3>
-            <p class="price">20€</p>
-          </div>
-          <div class="price-card">
-            <h3>🌍 Público General</h3>
-            <p class="price">80€</p>
-          </div>
+          <table class="price-table">
+            <tr>
+              <th></th>
+              <th>Congreso</th>
+              <th>Jornadas</th>
+              <th>Congreso + Jornadas</th>
+            </tr>
+            <tr>
+              <td class="gray-cell"> 
+
+                🌍 Profesionales y público en general</td>
+              <td>30€</td>
+              <td>20€</td>
+              <td>50€</td>
+            </tr>
+            <tr>
+              <td class="gray-cell">📌 Socios CNSE, FIAPAS, ONCE</td>
+              <td>30€</td>
+              <td>20€</td>
+              <td>50€</td>
+            </tr>
+            <tr>
+              <td class="gray-cell">🎓 Alumno ULL</td>
+              <td>30€</td>
+              <td>20€</td>
+              <td>50€</td>
+            </tr>
+          </table>
         </div>
   
         <p class="inscription-instructions">
-          📌 Para inscribirte, realiza una transferencia bancaria y en el concepto incluye tu <b>nombre completo y DNI</b> y manda una captura al correo <b>catavs@ull.edu.es</b>
+           Para inscribirte, realiza una transferencia bancaria y en el concepto incluye tu <b>nombre completo y DNI</b> y manda una captura al correo <b>catavs@ull.edu.es</b>
         </p>
   
         <div class="bank-details">
@@ -61,7 +81,7 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
       font-size: 2rem;
       font-weight: bold;
       margin-bottom: 15px;
-      color: #333;
+      color: #6a11cb;
     }
   
     .inscription-text {
@@ -76,24 +96,30 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
       gap: 30px;
       margin-bottom: 20px;
     }
-  
-    .price-card {
-      background: #f4f4f4;
-      padding: 15px 25px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
     }
-  
-    .price-card h3 {
-      margin: 0;
-      font-size: 1.1rem;
-      color: #222;
+
+    .price-table th, .price-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
     }
-  
-    .price {
-      font-size: 1.8rem;
+
+    .price-table th {
+      background-color: #f4f4f4;
       font-weight: bold;
-      color: #6a11cb;
+    }
+
+    .price-table td {
+      background-color: #fff;
+    }
+
+    .gray-cell {
+      background-color: #f0f0f0;
     }
   
     .inscription-instructions {
@@ -126,7 +152,6 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
       background: #7300a9;
     }
   </style>
-  
   
   <ContentMedia imgSrc="src/assets/img/aulario.jpg">
     <h2>¿Dónde tendrá lugar?</h2>
@@ -223,5 +248,3 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
     gap: 8px;
   }
 </style>
-
-

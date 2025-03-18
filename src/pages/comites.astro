@@ -7,161 +7,242 @@ import aularioull from '/src/assets/img/aularioull.jpg'
 <DefaultLayout title="Comités">
   <section class="my-24">
     <div class="container">
-      <h2 class="text-6xl text-center mb-6">Miembros del Evento</h2>
-      <p class="text-2xl text-center mb-7 mt-1" id="members-text">
-        Conoce a los miembros de los diferentes comités que forman parte del Congreso 
-      </p>
-      <div class="accordion">
-        <div class="accordion-item">
-          <input type="checkbox" id="comision-mixta" class="accordion-toggle">
-          <label for="comision-mixta" class="accordion-label">Comisión Mixta</label>
-          <div class="accordion-content">
-            <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-              <div class="member-card">
-                <img src={aulario.src} alt="Dra. Olga María Alegre de la Rosa" class="member-image" />
-                <h2 class="text-2xl mt-4">Dra. Olga María Alegre de la Rosa</h2>
-                <p class="text-lg mt-2">Universidad de La Laguna (ULL).</p>
-              </div>
-              <div class="member-card">
-                <img src={aulario.src} alt="Dña. Helena Arroyo Moratilla" class="member-image" />
-                <h2 class="text-2xl mt-4">Dña. Helena Arroyo Moratilla</h2>
-                <p class="text-lg mt-2">Universidad Complutense de Madrid (UCM).</p>
-              </div>
-              <!-- Añade más miembros aquí -->
-            </div>
-          </div>
+      <h1 class="text-6xl text-center mb-16">Miembros del Evento</h1>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <div class="member-card">
+          <img src={aulario.src} alt="Dra. Olga María Alegre de la Rosa" class="member-image" />
+          <h2 class="text-2xl mt-4">Dra. Olga María Alegre de la Rosa</h2>
+          <p class="text-lg mt-2">Universidad de La Laguna (ULL).</p>
         </div>
-        <div class="accordion-item">
-          <input type="checkbox" id="consejo-asesor" class="accordion-toggle">
-          <label for="consejo-asesor" class="accordion-label">Consejo Asesor</label>
-          <div class="accordion-content">
-            <div class="accordion">
-              {[
-                "Comisión de Audiología",
-                "Comisión de Derecho",
-                "Comisión de Educación",
-                "Comisión de Enfermería",
-                "Comisión de Implantes Cocleares",
-                "Comisión de Lengua de Signos",
-                "Comisión de Logopedia",
-                "Comisión ONCE",
-                "Comisión de Pediatría",
-                "Comisión de Psicología",
-                "Comisión de Psiquiatría",
-                "Comisión de Sordoceguera",
-                "Comisión de Psicomotricidad",
-                "Comisión de Voz",
-                "Comisión FIAPAS",
-                "Comisión de Fisioterapia"
-              ].map((comision, i) => (
-                <div class="accordion-item">
-                  <input type="checkbox" id={`comision-${i + 1}`} class="accordion-toggle">
-                  <label for={`comision-${i + 1}`} class="accordion-label">{comision}</label>
-                  <div class="accordion-content">
-                    <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-                      <div class="member-card">
-                        <img src={aulario.src} alt="Dr. José Juan Barajas de Prat" class="member-image" />
-                        <h2 class="text-2xl mt-4">Dr. José Juan Barajas de Prat</h2>
-                        <p class="text-lg mt-2">Presidente de la Fundación Canaria Doctor Barajas para la Prevención e Investigación de la Sordera.</p>
-                      </div>
-                      <div class="member-card">
-                        <img src={aulario.src} alt="Dra. Susana Bena Villaseño" class="member-image" />
-                        <h2 class="text-2xl mt-4">Dra. Susana Bena Villaseño</h2>
-                        <p class="text-lg mt-2">Universidad Rey Juan Carlos (URJC).</p>
-                      </div>
-                      <!-- Añade más miembros aquí -->
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dña. Helena Arroyo Moratilla" class="member-image" />
+          <h2 class="text-2xl mt-4">Dña. Helena Arroyo Moratilla</h2>
+          <p class="text-lg mt-2">Universidad Complutense de Madrid (UCM).</p>
         </div>
-        <div class="accordion-item">
-          <input type="checkbox" id="consejo-direccion" class="accordion-toggle">
-          <label for="consejo-direccion" class="accordion-label">Consejo Dirección</label>
-          <div class="accordion-content">
-            <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-              <div class="member-card">
-                <img src={aulario.src} alt="Dra. Chantal Biencinto López" class="member-image" />
-                <h2 class="text-2xl mt-4">Dra. Chantal Biencinto López</h2>
-                <p class="text-lg mt-2">Universidad Complutense de Madrid (UCM).</p>
-              </div>
-              <div class="member-card">
-                <img src={aulario.src} alt="Dra. Silvia Andrea Borkoski Barreiro" class="member-image" />
-                <h2 class="text-2xl mt-4">Dra. Silvia Andrea Borkoski Barreiro</h2>
-                <p class="text-lg mt-2">Unidad de Hipoacusia del Hospital Universitario Insular Materno Infantil (CHUIMI), Las Palmas de Gran Canaria.</p>
-              </div>
-              <!-- Añade más miembros aquí -->
-            </div>
-          </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dr. José Juan Barajas de Prat" class="member-image" />
+          <h2 class="text-2xl mt-4">Dr. José Juan Barajas de Prat</h2>
+          <p class="text-lg mt-2">Presidente de la Fundación Canaria Doctor Barajas para la Prevención e Investigación de la Sordera.</p>
         </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dra. Susana Bena Villaseño" class="member-image" />
+          <h2 class="text-2xl mt-4">Dra. Susana Bena Villaseño</h2>
+          <p class="text-lg mt-2">Universidad Rey Juan Carlos (URJC).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dra. Chantal Biencinto López" class="member-image" />
+          <h2 class="text-2xl mt-4">Dra. Chantal Biencinto López</h2>
+          <p class="text-lg mt-2">Universidad Complutense de Madrid (UCM).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dra. Silvia Andrea Borkoski Barreiro" class="member-image" />
+          <h2 class="text-2xl mt-4">Dra. Silvia Andrea Borkoski Barreiro</h2>
+          <p class="text-lg mt-2">Unidad de Hipoacusia del Hospital Universitario Insular Materno Infantil (CHUIMI), Las Palmas de Gran Canaria.</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dr. Alejandro Cano Villagrasa" class="member-image" />
+          <h2 class="text-2xl mt-4">Dr. Alejandro Cano Villagrasa</h2>
+          <p class="text-lg mt-2">Universidad Internacional de Valencia (VIU).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dña. Almudena Cervera Cruañes" class="member-image" />
+          <h2 class="text-2xl mt-4">Dña. Almudena Cervera Cruañes</h2>
+          <p class="text-lg mt-2">Universidad Internacional de la Rioja (UNIR).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dña. Isabel Chicharro Soria" class="member-image" />
+          <h2 class="text-2xl mt-4">Dña. Isabel Chicharro Soria</h2>
+          <p class="text-lg mt-2">Unidad de Hipoacusia del Hospital Universitario Insular Materno Infantil (CHUIMI), Las Palmas de Gran Canaria.</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dña. María Eulalia Díaz García" class="member-image" />
+          <h2 class="text-2xl mt-4">Dña. María Eulalia Díaz García</h2>
+          <p class="text-lg mt-2">Universidad de La Laguna (ULL).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dña. Concepción María Díaz Robledo" class="member-image" />
+          <h2 class="text-2xl mt-4">Dña. Concepción María Díaz Robledo</h2>
+          <p class="text-lg mt-2">Presidenta de la Fundación CNSE.</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="María Luz Esteban Saiz" class="member-image" />
+          <h2 class="text-2xl mt-4">María Luz Esteban Saiz</h2>
+          <p class="text-lg mt-2">Directora del Centro de Normalización Lingüística de la Lengua de Signos Española (CNLSE).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dr. Juan Carlos Falcón González" class="member-image" />
+          <h2 class="text-2xl mt-4">Dr. Juan Carlos Falcón González</h2>
+          <p class="text-lg mt-2">Unidad de Hipoacusia del Hospital Universitario Insular Materno Infantil (CHUIMI), Las Palmas de Gran Canaria.</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="D. José Fierro Marrero" class="member-image" />
+          <h2 class="text-2xl mt-4">D. José Fierro Marrero</h2>
+          <p class="text-lg mt-2">Centro Superior de Estudios Universitarios La Salle-Universidad Autónoma de Madrid (UAM).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dra. Laura Flix Díez" class="member-image" />
+          <h2 class="text-2xl mt-4">Dra. Laura Flix Díez</h2>
+          <p class="text-lg mt-2">Clínica Universidad de Navarra (Madrid).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dra. Mercedes García García" class="member-image" />
+          <h2 class="text-2xl mt-4">Dra. Mercedes García García</h2>
+          <p class="text-lg mt-2">Universidad Complutense de Madrid (UCM).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dr. Luis Antonio García González" class="member-image" />
+          <h2 class="text-2xl mt-4">Dr. Luis Antonio García González</h2>
+          <p class="text-lg mt-2">Universidad de La Laguna (ULL).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dra. Raquel González Hernández" class="member-image" />
+          <h2 class="text-2xl mt-4">Dra. Raquel González Hernández</h2>
+          <p class="text-lg mt-2">Universidad de La Laguna (ULL).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dr. Rayco H. González Montesino" class="member-image" />
+          <h2 class="text-2xl mt-4">Dr. Rayco H. González Montesino</h2>
+          <p class="text-lg mt-2">Universidad Rey Juan Carlos (URJC).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dr. Eneko Larumbe Zabala" class="member-image" />
+          <h2 class="text-2xl mt-4">Dr. Eneko Larumbe Zabala</h2>
+          <p class="text-lg mt-2">Fundación Canaria Instituto de Investigación Sanitaria de Canarias.</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dña. Marta Lesme Fernández" class="member-image" />
+          <h2 class="text-2xl mt-4">Dña. Marta Lesme Fernández</h2>
+          <p class="text-lg mt-2">Universidad de Las Palmas de Gran Canaria (ULPGC).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dra. Elena López Burgos" class="member-image" />
+          <h2 class="text-2xl mt-4">Dra. Elena López Burgos</h2>
+          <p class="text-lg mt-2">Universidad Rey Juan Carlos (URJC).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dña. Mariana Maggio De Maggi" class="member-image" />
+          <h2 class="text-2xl mt-4">Dña. Mariana Maggio De Maggi</h2>
+          <p class="text-lg mt-2">Programa Infantil Phonak.</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dra. María Teresa Martín-Aragoneses" class="member-image" />
+          <h2 class="text-2xl mt-4">Dra. María Teresa Martín-Aragoneses</h2>
+          <p class="text-lg mt-2">Universidad Nacional de Educación a Distancia (UNED).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dra. Stephanie Marie Michele Papin" class="member-image" />
+          <h2 class="text-2xl mt-4">Dra. Stephanie Marie Michele Papin</h2>
+          <p class="text-lg mt-2">Universidad Rey Juan Carlos (URJC).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dr. Txomin Navajas Carasa" class="member-image" />
+          <h2 class="text-2xl mt-4">Dr. Txomin Navajas Carasa</h2>
+          <p class="text-lg mt-2">Hospital Universitario Hospiten Rambla.</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dña. Irene Puerta Araña" class="member-image" />
+          <h2 class="text-2xl mt-4">Dña. Irene Puerta Araña</h2>
+          <p class="text-lg mt-2">Universidad de La Laguna (ULL).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dr. Ángel Manuel Ramos Macías" class="member-image" />
+          <h2 class="text-2xl mt-4">Dr. Ángel Manuel Ramos Macías</h2>
+          <p class="text-lg mt-2">Unidad de Hipoacusia del Hospital Universitario Insular Materno Infantil (CHUIMI), Las Palmas de Gran Canaria.</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dr. Pedro Javier Rodríguez Hernández" class="member-image" />
+          <h2 class="text-2xl mt-4">Dr. Pedro Javier Rodríguez Hernández</h2>
+          <p class="text-lg mt-2">Universidad de La Laguna (ULL).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dra. María del Carmen Rodríguez Jiménez" class="member-image" />
+          <h2 class="text-2xl mt-4">Dra. María del Carmen Rodríguez Jiménez</h2>
+          <p class="text-lg mt-2">Universidad de La Laguna (ULL).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dra. Marina Salorio-Corbetto" class="member-image" />
+          <h2 class="text-2xl mt-4">Dra. Marina Salorio-Corbetto</h2>
+          <p class="text-lg mt-2">Universidad de Cambridge.</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dra. Inmaculada Sánchez Casado" class="member-image" />
+          <h2 class="text-2xl mt-4">Dra. Inmaculada Sánchez Casado</h2>
+          <p class="text-lg mt-2">Universidad de Extremadura (UEx).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dña. Beatriz Sackett" class="member-image" />
+          <h2 class="text-2xl mt-4">Dña. Beatriz Sackett</h2>
+          <p class="text-lg mt-2">Certificada en Terapia Auditivo-VerbalTM Los Ángeles, California.</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dña. Margarita Torres García de Celis" class="member-image" />
+          <h2 class="text-2xl mt-4">Dña. Margarita Torres García de Celis</h2>
+          <p class="text-lg mt-2">Unidad de Hipoacusia del Hospital Universitario Insular Materno Infantil (CHUIMI), Las Palmas de Gran Canaria.</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="D. Roberto Suárez Martín" class="member-image" />
+          <h2 class="text-2xl mt-4">D. Roberto Suárez Martín</h2>
+          <p class="text-lg mt-2">Presidente de la Confederación Nacional de Sordos de España (CNSE).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dña. Alexandra Tisaire de Dios" class="member-image" />
+          <h2 class="text-2xl mt-4">Dña. Alexandra Tisaire de Dios</h2>
+          <p class="text-lg mt-2">Universidad Complutense de Madrid (UCM).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dra. Alba Ayuso Lanchares" class="member-image" />
+          <h2 class="text-2xl mt-4">Dra. Alba Ayuso Lanchares</h2>
+          <p class="text-lg mt-2">Universidad de Valladolid (UVa) y Universidad Oberta de Catalunya (UOC).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dra. Rosa Belén Santiago Pardo" class="member-image" />
+          <h2 class="text-2xl mt-4">Dra. Rosa Belén Santiago Pardo</h2>
+          <p class="text-lg mt-2">Universidad de Valladolid (UVa).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dña. María Cambre Barceló" class="member-image" />
+          <h2 class="text-2xl mt-4">Dña. María Cambre Barceló</h2>
+          <p class="text-lg mt-2">Unidad Técnica de Sordoceguera ONCE.</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="D. Juan Manuel Batista Velázquez" class="member-image" />
+          <h2 class="text-2xl mt-4">D. Juan Manuel Batista Velázquez</h2>
+          <p class="text-lg mt-2">Universidad de La Laguna (ULL).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dra. Susana Valverde Montesino" class="member-image" />
+          <h2 class="text-2xl mt-4">Dra. Susana Valverde Montesino</h2>
+          <p class="text-lg mt-2">Universidad Complutense de Madrid (UCM).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dra. Beatriz Rosa Valles González" class="member-image" />
+          <h2 class="text-2xl mt-4">Dra. Beatriz Rosa Valles González</h2>
+          <p class="text-lg mt-2">Universidad Internacional de Valencia (VIU).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dr. Iván Vázquez Villar" class="member-image" />
+          <h2 class="text-2xl mt-4">Dr. Iván Vázquez Villar</h2>
+          <p class="text-lg mt-2">Universidad Rey Juan Carlos (URJC).</p>
+        </div>
+        <div class="member-card">
+          <img src={aulario.src} alt="Dr. Iván Vázquez Villar" class="member-image" />
+          <h2 class="text-2xl mt-4">D. Franz Zenker Castro.</h2>
+          <p class="text-lg mt-2">Secretario de la Fundación Canaria Doctor Barajas para la Prevención e Investigación de la Sordera.</p>
+        </div>
+        
       </div>
     </div>
   </section>
 </DefaultLayout>
 
 <style lang="scss">
-  .accordion {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-  }
-
-  .accordion-item {
-    border-bottom: 1px solid #ddd;
-    transition: background-color 0.3s, color 0.3s;
-  }
-
-  .accordion-item:last-child {
-    border-bottom: none;
-  }
-
-  .accordion-toggle {
-    display: none;
-  }
-
-  .accordion-label {
-    display: block;
-    padding: 15px;
-    background: #f7f7f7;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
-  }
-
-  .accordion-content {
-    display: none;
-    padding: 15px;
-    background: #fff;
-  }
-
-  .accordion-toggle:checked + .accordion-label + .accordion-content {
-    display: block;
-  }
-
-  .accordion-item:hover .accordion-label {
-    background-color: #6a11cb;
-    color: white;
-  }
-
-  .accordion-item .accordion-label:hover {
-    background-color: #6a11cb;
-    color: white;
-  }
-
   .member-card {
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; /* Color de fondo normal */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, color 0.3s;
-  }
-
-  .member-card:hover {
-    background-color: #6a11cb;
-    color: white;
+    transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
   }
 
   .member-image {
@@ -173,15 +254,22 @@ import aularioull from '/src/assets/img/aularioull.jpg'
   }
 
   .member-card h2 {
-    color: #7604b7;
+    color: #7604b7; /* Color de texto del título */
   }
 
   .member-card p {
-    color: #333;
+    color: #333; /* Color de texto del párrafo */
   }
 
+  /* Estilos para el efecto hover */
+  .member-card:hover {
+    background-color: #6a11cb; /* Cambiar a color violeta al hacer hover */
+    color: white; /* Cambiar color de texto a blanco al hacer hover */
+  }
+
+  /* Cambiar color del título y párrafo al hacer hover */
   .member-card:hover h2,
   .member-card:hover p {
-    color: white;
+    color: white; /* Cambiar el color de texto a blanco */
   }
 </style>
