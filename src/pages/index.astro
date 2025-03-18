@@ -10,148 +10,71 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
 <DefaultLayout title="Home">
   <Hero />
   
-  <section class="inscription-section">
-    <div class="container">
-      <div class="inscription-box">
-        <h2 class="inscription-title">📢 ¡Inscripciones Abiertas!</h2>
-        <p class="inscription-text">
-          Forma parte del Primer congreso internacional de Sordera, Discapacidad Auditiva y Sordoceguera. Realiza tu inscripción siguiendo estos pasos:
-        </p>
-  
-        <div class="prices">
-          <table class="price-table">
-            <tr>
-              <th></th>
-              <th>Congreso</th>
-              <th>Jornadas</th>
-              <th>Congreso + Jornadas</th>
-            </tr>
-            <tr>
-              <td class="gray-cell"> 
+  <section class="inscription-section bg-gradient-to-b from-purple-900 to-purple-800 py-16">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white shadow-2xl rounded-2xl p-8 border border-purple-200">
 
-                🌍 Profesionales y público en general</td>
-              <td>30€</td>
-              <td>20€</td>
-              <td>50€</td>
-            </tr>
-            <tr>
-              <td class="gray-cell">📌 Socios CNSE, FIAPAS, ONCE</td>
-              <td>30€</td>
-              <td>20€</td>
-              <td>50€</td>
-            </tr>
-            <tr>
-              <td class="gray-cell">🎓 Alumno ULL</td>
-              <td>30€</td>
-              <td>20€</td>
-              <td>50€</td>
-            </tr>
-          </table>
-        </div>
-  
-        <p class="inscription-instructions">
-           Para inscribirte, realiza una transferencia bancaria y en el concepto incluye tu <b>nombre completo y DNI</b> y manda una captura al correo <b>catavs@ull.edu.es</b>
-        </p>
-  
-        <div class="bank-details">
-          <p><strong>💳 Cuenta Bancaria:</strong> ES00 0000 0000 0000 0000 0000</p>
-          <p><strong>📅 Plazo límite:</strong> 5 de Octubre de 2025</p>
+        <!-- Texto descriptivo -->
+<div>
+  <h2 class="text-4xl font-bold text-black text-center">¿Cómo inscribirse?</h2>
+  <p class="text-lg text-black mt-3 text-center">Para formar parte de este evento único, sigue estos pasos:</p>
+  <div class="bg-white p-6 rounded-lg shadow-inner mt-6">
+    <ol class="list-decimal pl-9 text-black space-y-4 text-lg">
+      <li>Envía un correo a <b class="text-black">catavs@ull.edu.es</b> o rellena el formulario solicitando la inscripción.</li>
+      <li>En el asunto, incluye tu <b class="text-black">nombre completo</b> y <b class="text-black">DNI</b>.</li>
+      <li>Verificaremos si quedan plazas disponibles.</li>
+      <li>Recibirás un correo con los detalles y el número de cuenta para el pago.</li>
+      <li class="text-red-700">⚠️ Las plazas estan limitadas a 250, se revisará el número de plazas disponibles y se le enviará un correo con el número de cuenta para que se realice el pago solicitado con las instrucciones. </li>
+    </ol>
+    <div class="mt-11 mb-1">
+      <a href="/inscripciones/" class="block text-center bg-purple-100 text-white py-1.5 px-3 w-32 rounded-lg hover:bg-purple-400 transition-all shadow-lg hover:shadow-xl">Ver Tarifas</a>
+    </div>
+    
+  </div>
+</div>
+
+        <!-- Formulario de inscripción -->
+        <div class="bg-white p-8 rounded-2xl shadow-md border border-purple-200">
+          <h2 class="text-2xl font-semibold text-purple-900">Inscríbete Ahora</h2>
+          <p class="text-black mb-6">Completa el formulario y te enviaremos los detalles por correo.</p>
+          
+          <form action="https://formsubmit.co/catavs@ull.edu.es" method="POST" class="space-y-6">
+            <!-- Nombre -->
+            <div>
+              <label for="name" class="block text-black font-medium">Nombre y Apellidos</label>
+              <input type="text" id="name" name="name" required placeholder="Escribe tu nombre completo" class="w-full p-3 border border-purple-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition" />
+            </div>
+
+            <!-- DNI -->  
+            <div>
+              <label for="dni" class="block text-black font-medium">DNI</label>
+              <input type="text" id="dni" name="dni" required placeholder="Escribe tu DNI" class="w-full p-3 border border-purple-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition" />
+            </div>
+
+            <!-- Tipo de inscripción -->
+            <div>
+              <label for="type" class="block text-black font-medium">Tipo de inscripción</label>
+              <select id="type" name="type" required class="w-full p-3 border border-purple-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition">
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="General">General</option>
+                <option value="Socios">Socios</option>
+                <option value="Alumno ULL">Alumno ULL</option>
+              </select>
+            </div>
+
+            <!-- Correo Electrónico -->
+            <div>
+              <label for="email" class="block text-black font-medium">Correo Electrónico</label>
+              <input type="email" id="email" name="email" required placeholder="Tu correo electrónico" class="w-full p-3 border border-purple-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition" />
+            </div>
+
+
+            <!-- Botón de envío -->
+            <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-all shadow-lg hover:shadow-xl">Enviar Inscripción</button>
+          </form>
         </div>
       </div>
-    </div>
-  </section>
-  
-  <style lang="scss">
-    .inscription-section {
-      background: linear-gradient(135deg, #6a11cb, #590086);
-      padding: 60px 20px;
-      text-align: center;
-    }
-  
-    .inscription-box {
-      background: white;
-      max-width: 700px;
-      margin: auto;
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-  
-    .inscription-title {
-      font-size: 2rem;
-      font-weight: bold;
-      margin-bottom: 15px;
-      color: #6a11cb;
-    }
-  
-    .inscription-text {
-      font-size: 1.2rem;
-      color: #555;
-      margin-bottom: 25px;
-    }
-  
-    .prices {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin-bottom: 20px;
-    }
-
-    .price-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 20px;
-    }
-
-    .price-table th, .price-table td {
-      border: 1px solid #ddd;
-      padding: 8px;
-      text-align: center;
-    }
-
-    .price-table th {
-      background-color: #f4f4f4;
-      font-weight: bold;
-    }
-
-    .price-table td {
-      background-color: #fff;
-    }
-
-    .gray-cell {
-      background-color: #f0f0f0;
-    }
-  
-    .inscription-instructions {
-      font-size: 1.1rem;
-      color: #444;
-      margin-bottom: 15px;
-    }
-  
-    .bank-details {
-      background: #f9f9f9;
-      padding: 15px;
-      border-radius: 8px;
-      font-size: 1rem;
-      color: #333;
-      margin-bottom: 20px;
-    }
-  
-    .inscription-button {
-      background: #6a11cb;
-      color: white;
-      border: none;
-      padding: 15px 30px;
-      font-size: 1.2rem;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-  
-    .inscription-button:hover {
-      background: #7300a9;
-    }
-  </style>
+    </section>
   
   <ContentMedia imgSrc="src/assets/img/aulario.jpg">
     <h2>¿Dónde tendrá lugar?</h2>

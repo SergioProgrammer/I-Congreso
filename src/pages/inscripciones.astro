@@ -9,20 +9,21 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
 ---
 
 <DefaultLayout title="Home">
-  <section class="inscription-section bg-gradient-to-b from-purple-900 to-purple-800 py-16">
+<section class="inscription-section bg-gradient-to-b from-purple-900 to-purple-800 py-16">
     <div class="container mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white shadow-2xl rounded-2xl p-8 border border-purple-200">
 
         <!-- Texto descriptivo -->
 <div>
   <h2 class="text-4xl font-bold text-black text-center">¿Cómo inscribirse?</h2>
-  <p class="text-lg text-black mt-6 text-center">Para formar parte de este evento único, sigue estos pasos:</p>
+  <p class="text-lg text-black mt-3 text-center">Para formar parte de este evento único, sigue estos pasos:</p>
   <div class="bg-white p-6 rounded-lg shadow-inner mt-6">
     <ol class="list-decimal pl-9 text-black space-y-4 text-lg">
       <li>Envía un correo a <b class="text-black">catavs@ull.edu.es</b> o rellena el formulario solicitando la inscripción.</li>
       <li>En el asunto, incluye tu <b class="text-black">nombre completo</b> y <b class="text-black">DNI</b>.</li>
       <li>Verificaremos si quedan plazas disponibles.</li>
       <li>Recibirás un correo con los detalles y el número de cuenta para el pago.</li>
+      <li class="text-red-700">⚠️ Las plazas estan limitadas a 250, se revisará el número de plazas disponibles y se le enviará un correo con el número de cuenta para que se realice el pago solicitado con las instrucciones. </li>
     </ol>
   </div>
 </div>
@@ -39,7 +40,7 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
               <input type="text" id="name" name="name" required placeholder="Escribe tu nombre completo" class="w-full p-3 border border-purple-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition" />
             </div>
 
-            <!-- DNI -->
+            <!-- DNI -->  
             <div>
               <label for="dni" class="block text-black font-medium">DNI</label>
               <input type="text" id="dni" name="dni" required placeholder="Escribe tu DNI" class="w-full p-3 border border-purple-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition" />
@@ -62,11 +63,6 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
               <input type="email" id="email" name="email" required placeholder="Tu correo electrónico" class="w-full p-3 border border-purple-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition" />
             </div>
 
-            <!-- Número de Inscripciones -->
-            <div>
-              <label for="inscriptions" class="block text-black font-medium">Número de Inscripciones</label>
-              <input type="number" id="inscriptions" name="inscriptions" required min="1" placeholder="Cantidad de inscripciones" class="w-full p-3 border border-purple-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition" />
-            </div>
 
             <!-- Botón de envío -->
             <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-all shadow-lg hover:shadow-xl">Enviar Inscripción</button>
@@ -79,7 +75,7 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
         
         <!-- Cuadro de Tarifas de Inscripción (Izquierda) -->
         <div class="bg-white p-8 rounded-2xl shadow-2xl border border-purple-200 h-full">
-          <h2 class="text-2xl font-semibold text-purple-900">Tarifas de Inscripción</h2>
+          <h2 class="text-2xl font-semibold text-purple-900">Tarifas de Inscripción HASTA el 30 de Mayo</h2>
           <p class="text-purple-700 mb-6">Consulta los precios y selecciona la mejor opción.</p>
           <div class="overflow-hidden rounded-lg border border-purple-200 shadow-inner">
             <table class="w-full border-collapse text-purple-800">
@@ -117,7 +113,7 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
 
         <!-- Cuadro de Tarifas de Inscripción (Derecha) -->
         <div class="bg-white p-8 rounded-2xl shadow-2xl border border-purple-200 h-full">
-          <h2 class="text-2xl font-semibold text-purple-900">Tarifas de Inscripción</h2>
+          <h2 class="text-2xl font-semibold text-purple-900">Tarifas de Inscripción A PARTIR del 30 Mayo</h2>
           <p class="text-purple-700 mb-6">Consulta los precios y selecciona la mejor opción.</p>
           <div class="overflow-hidden rounded-lg border border-purple-200 shadow-inner">
             <table class="w-full border-collapse text-purple-800">
@@ -152,6 +148,63 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
             </table>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+  <section class="my-64">
+    <div class="container grid grid-cols-1 gap-12 md:grid-cols-2">
+      <div class="flex flex-col items-start gap-4">
+        <h2 class="text-6xl">Preguntas</h2>
+        <p class="text-2xl" id="faq-text">
+          En esta sección puedes consultar las dudas frecuentes por si te sirven de ayuda. En caso de no encontrar respuesta no dudes en consultarnos.
+        </p>
+        <a class="button" href="https://www.instagram.com/catedradiscapacidadauditiva/">Contacta con nosotros</a>
+      </div>
+      <div class="space-content">
+        <Accordion>
+          <AccordionItem name="exclusive" title="¿Cómo puedo asistir al congreso?" open>
+            <p>
+              WCAG (Web Content Accessibility Guidelines) is a set of internationally recognized standards for web
+              accessibility. Following WCAG ensures your website is usable by people with various disabilities,
+              including visual, auditory, physical, and cognitive impairments. It's important not just for
+              accessibility, but also for legal compliance, SEO, and reaching a wider audience.
+            </p>
+          </AccordionItem>
+          <AccordionItem name="exclusive" title="¿Es necesario el pago de alguna entrada?">
+            <p>
+              Alt text is specifically for describing images to screen reader users, while ARIA labels (aria-label,
+              aria-labelledby) can describe any element on a page. Alt text is HTML's native way to provide alternative
+              text for images, while ARIA labels are part of the ARIA specification that helps make dynamic content and
+              advanced UI controls more accessible.
+            </p>
+          </AccordionItem>
+          <AccordionItem name="exclusive" title="¿Puedo acudir solamente a las charlas que me interesen?">
+            <p>
+              Keyboard navigation is essential for users who can't use a mouse, including people with motor
+              disabilities, visual impairments, or those who simply prefer keyboard controls. A website should be fully
+              operable using only a keyboard, with visible focus indicators and logical tab order. This includes being
+              able to access all interactive elements and navigate through content efficiently.
+            </p>
+          </AccordionItem>
+          <AccordionItem name="exclusive" title="¿Que ocurre si se cancela el evento?">
+            <p>
+              According to WCAG 2.2 AA standards, text should have a minimum contrast ratio of 4.5:1 against its
+              background for regular text, and 3:1 for large text (18pt or 14pt bold). For non-text elements like icons
+              or buttons, a minimum ratio of 3:1 is required. This ensures content is readable for users with visual
+              impairments or color blindness.
+            </p>
+          </AccordionItem>
+          <AccordionItem name="exclusive" title="¿Puedo dar yo alguna charla?">
+            <p>
+              To make custom components accessible, focus on these key aspects: use semantic HTML where possible,
+              implement proper keyboard support, add appropriate ARIA attributes, manage focus when needed, and ensure
+              adequate color contrast. Always test with screen readers and keyboard navigation. Consider using
+              established design patterns from the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/"
+                >ARIA Authoring Practices Guide</a
+              >.
+            </p>
+          </AccordionItem>
+        </Accordion>
       </div>
     </div>
   </section>
