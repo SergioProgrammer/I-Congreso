@@ -1,0 +1,89 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+---
+
+<DefaultLayout title="Optimizar Imágenes a WebP">
+  <section class="p-10 flex flex-col items-center">
+    <h1 class="text-4xl font-bold text-center mb-6">Optimiza tus Imágenes a WebP</h1>
+    <p class="text-gray-600 text-center mb-6">Selecciona hasta 55 imágenes para convertirlas a WebP</p>
+
+    <div class="w-full max-w-xl bg-white shadow-lg rounded-lg p-6">
+      <input type="file" id="imageInput" accept="image/*" multiple class="mb-4 w-full p-2 border rounded" />
+      <p id="fileCount" class="text-gray-600 text-center mb-4"></p>
+
+      <button id="convertBtn" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
+        Convertir a WebP
+      </button>
+
+      <a id="downloadBtn" class="hidden mt-4 w-full text-center bg-green-600 text-white py-2 rounded hover:bg-green-700 transition">
+        Descargar Imágenes WebP
+      </a>
+
+      <div id="previewContainer" class="grid grid-cols-3 gap-2 mt-4"></div>
+    </div>
+  </section>
+
+  <script type="module">
+    import Compressor from "https://cdn.jsdelivr.net/npm/compressorjs@1.2.1/+esm";
+    import JSZip from "https://cdn.jsdelivr.net/npm/jszip@3.10.1/+esm";
+
+    const imageInput = document.getElementById("imageInput");
+    const convertBtn = document.getElementById("convertBtn");
+    const downloadBtn = document.getElementById("downloadBtn");
+    const previewContainer = document.getElementById("previewContainer");
+    const fileCount = document.getElementById("fileCount");
+
+    let images = [];
+
+    imageInput.addEventListener("change", (event) => {
+      images = Array.from(event.target.files).slice(0, 60); // Limita a 60 imágenes
+      fileCount.textContent = `Imágenes seleccionadas: ${images.length}`;
+      previewContainer.innerHTML = "";
+
+      images.forEach((file) => {
+        const img = document.createElement("img");
+        img.src = URL.createObjectURL(file);
+        img.classList.add("w-24", "h-24", "object-cover", "rounded");
+        previewContainer.appendChild(img);
+      });
+    });
+
+    convertBtn.addEventListener("click", async () => {
+      if (images.length === 0) return alert("Selecciona imágenes primero");
+
+      const zip = new JSZip();
+      let processedCount = 0;
+
+      for (const image of images) {
+        await new Promise((resolve) => {
+          new Compressor(image, {
+            quality: 0.8,
+            convertTypes: ["image/webp"],
+            success(result) {
+              const reader = new FileReader();
+              reader.readAsArrayBuffer(result);
+              reader.onload = () => {
+                zip.file(`${image.name.split('.')[0]}.webp`, reader.result);
+                processedCount++;
+                if (processedCount === images.length) {
+                  zip.generateAsync({ type: "blob" }).then((content) => {
+                    const zipUrl = URL.createObjectURL(content);
+                    downloadBtn.href = zipUrl;
+                    downloadBtn.download = "imagenes-optimizadas.zip";
+                    downloadBtn.classList.remove("hidden");
+                    downloadBtn.textContent = "Descargar Imágenes WebP";
+                  });
+                }
+                resolve();
+              };
+            },
+            error(err) {
+              console.error(err);
+              resolve();
+            },
+          });
+        });
+      }
+    });
+  </script>
+</DefaultLayout>
