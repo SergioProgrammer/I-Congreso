@@ -1,58 +1,63 @@
-require('dotenv').config(); // Asegúrate de requerir dotenv al inicio
+import express from 'express';
+import multer from 'multer';
+import nodemailer from 'nodemailer';
+import cors from 'cors';
+import dotenv from 'dotenv';
 
-const express = require('express');
-const nodemailer = require('nodemailer');
-const bodyParser = require('body-parser');
-const cors = require('cors');
+dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const port = 3000;
 
 app.use(cors());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// Configura el transportador de Nodemailer usando variables de entorno
-const transporter = nodemailer.createTransport({
-  service: 'gmail', // Puedes usar otro servicio si prefieres
-  auth: {
-    user: process.env.EMAIL_USER, // Usa la variable de entorno para el correo
-    pass: process.env.EMAIL_PASS,  // Usa la variable de entorno para la contraseña
-  },
-});
+// Configuración de multer para almacenar archivos temporalmente
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
 
-// Ruta para manejar el envío del formulario
-app.post('/submit', (req, res) => {
-  const { name, email, comments } = req.body;
+app.post('/send-email', upload.single('document'), async (req, res) => {
+    try {
+        const { name, email, comments } = req.body;
+        const file = req.file;
 
-  // Manejo de archivo si es necesario (debes usar multer o similar para esto)
-  // const document = req.files.document; 
+        if (!file) {
+            return res.status(400).send("No se ha subido ningún archivo.");
+        }
 
-  // Configura el correo
-  const mailOptions = {
-    from: process.env.EMAIL_USER, // Usa la variable de entorno para el correo
-    to: 'saraquintanadg@gmail.com',
-    subject: 'Nuevo Proyecto Enviado',
-    text: `Nombre: ${name}\nCorreo: ${email}\nComentarios: ${comments}`,
-    // Si manejas archivos, incluye esto:
-    // attachments: [
-    //   {
-    //     filename: document.name,
-    //     content: document.data,
-    //   },
-    // ],
-  };
+        // Configuración de transporte de correo con Gmail
+        const transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: process.env.EMAIL_USER, // Tu correo
+                pass: process.env.EMAIL_PASS, // Tu contraseña o App Password de Gmail
+            }
+        });
 
-  // Envía el correo
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      return res.status(500).send('Error al enviar el correo');
+        // Configuración del correo
+        const mailOptions = {
+            from: process.env.EMAIL_USER,
+            to: "sergiosanpacheco@gmail.com",
+            subject: "Nueva contribución de proyecto",
+            text: `Nombre: ${name}\nEmail: ${email}\nComentarios: ${comments}`,
+            attachments: [
+                {
+                    filename: file.originalname,
+                    content: file.buffer
+                }
+            ]
+        };
+
+        // Enviar el correo
+        await transporter.sendMail(mailOptions);
+        res.status(200).send("Correo enviado correctamente.");
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Error al enviar el correo.");
     }
-    res.status(200).send('Formulario enviado correctamente');
-  });
 });
 
-// Inicia el servidor
-app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+app.listen(port, () => {
+    console.log(`Servidor corriendo en http://localhost:${port}`);
 });

@@ -6,7 +6,7 @@ import DefaultLayout from '../layouts/DefaultLayout.astro';
   <section class="contribution-section">
     <div class="container">
       <h1 class="text-6xl text-center mb-16">Envío de Proyectos</h1>
-      <form class="contribution-form" action="http://localhost:3000/submit" method="POST" enctype="multipart/form-data">
+      <form class="contribution-form" action="https://congresoull.vercel.app/contribuciones/submit" method="POST" enctype="multipart/form-data">
         <div class="form-group">
           <label for="name">Nombre y Apellidos</label>
           <input type="text" id="name" name="name" required />
@@ -16,9 +16,9 @@ import DefaultLayout from '../layouts/DefaultLayout.astro';
           <input type="email" id="email" name="email" required />
         </div>
         <div class="form-group">
-            <label for="comments">Comentarios (máximo 200 palabras)</label>
-            <textarea id="comments" name="comments" rows="4" maxlength="200" required></textarea>
-          </div>
+          <label for="comments">Comentarios (máximo 200 palabras)</label>
+          <textarea id="comments" name="comments" rows="4" maxlength="200" required></textarea>
+        </div>
         <div class="form-group">
           <label for="document">Cargar Documento (PDF)</label>
           <input type="file" id="document" name="document" accept="application/pdf" required />
@@ -29,7 +29,7 @@ import DefaultLayout from '../layouts/DefaultLayout.astro';
   </section>
 </DefaultLayout>
 
-<style lang="scss">
+<style>
   .contribution-section {
     padding: 60px 20px;
     text-align: center;
@@ -61,7 +61,8 @@ import DefaultLayout from '../layouts/DefaultLayout.astro';
     margin-bottom: 5px;
   }
 
-  .form-group input {
+  .form-group input,
+  .form-group textarea {
     width: 100%;
     padding: 10px;
     font-size: 1rem;
