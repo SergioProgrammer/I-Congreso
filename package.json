@@ -64,5 +64,6 @@
   },
   "bugs": {
     "url": "https://github.com/incluud/accessible-astro-starter/issues"
-  }
+  },
+  "main": ".eslintrc.js"
 }
