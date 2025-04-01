@@ -1,6 +1,5 @@
 ---
 import ResponsiveToggle from './ResponsiveToggle.astro'
-import { DarkMode } from 'accessible-astro-components'
 import { Image } from 'astro:assets'
 import logo from '../assets/img/logo.PNG'
 ---
@@ -17,7 +16,7 @@ import logo from '../assets/img/logo.PNG'
           <slot />
         </ul>
       </nav>
-      <DarkMode />
+      
       <ResponsiveToggle />
     </div>
     <nav class="mobile-menu" aria-label="Main navigation mobile">

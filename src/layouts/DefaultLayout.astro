@@ -5,6 +5,7 @@ import SiteMeta from '../components/SiteMeta.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 
+
 const {
   title = 'Astro',
   description = 'Pagina de la Cátedra institucional de la Universidad de La Laguna',
@@ -22,17 +23,23 @@ const {
 
     <!-- favicon -->
     <link rel="icon" type="image/PNG+xml" href="/hero.PNG" />
-
     <SiteMeta title={title} description={description.substring(0, 100)} url={url} image={image} author={author} />
   </head>
   <body>
+
+    <!-- Header -->
     <Header />
-    <main id="main-content" transition:animate="fade">
+
+    <!-- Main content -->
+    <main id="main-content">
       <slot />
     </main>
+
+    <!-- Footer -->
     <Footer />
+
     <style lang="scss" is:global>
-      // theme settings
+      // Theme settings
       :root {
         --radius-small: 3px;
         --radius-large: 6px;
@@ -40,7 +47,7 @@ const {
         --font-measure: 70ch;
         --font-family-default: 'Open Sans', sans-serif;
         --font-family-special: 'Open Sans', sans-serif;
-        // light theme
+        // Light theme
         --font-color: var(--neutral-900);
         --action-color: var(--primary-300);
         --action-color-state: var(--primary-500);
@@ -49,17 +56,9 @@ const {
         --neutral-background: var(--neutral-200);
       }
 
-      // dark color scheme overrides
-      .darkmode {
-        --font-color: var(--neutral-100);
-        --action-color: var(--secondary-100);
-        --action-color-state: var(--secondary-500);
-        --background: var(--dark-100);
-        --primary-background: var(--primary-500);
-        --neutral-background: var(--neutral-900);
-      }
+      
 
-      // sticky footer on low content pages
+      // Sticky footer on low content pages
       html,
       body {
         height: 100%;

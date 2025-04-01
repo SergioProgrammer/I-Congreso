@@ -1,9 +1,7 @@
 ---
 import Navigation from '../components/Navigation.astro'
 import { SkipLink } from 'accessible-astro-components'
-import { Icon } from 'astro-icon/components'
 ---
-
 <header>
   <SkipLink />
   <Navigation>
@@ -31,32 +29,11 @@ import { Icon } from 'astro-icon/components'
     <li class="menu-item">
       <a href="/blog/">Ponentes</a>
     </li>
+    <li class="menu-item">
+      <a href="/blog/">English</a>
+    </li>
     
   </Navigation>
 </header>
 
-<style lang="scss" is:global>
-  @use '../assets/scss/base/outline' as *;
 
-  header {
-    .type-icon a {
-      display: block;
-
-      [data-icon] {
-        margin-top: -4px;
-        width: 30px;
-        height: auto;
-
-        path {
-          fill: var(--action-color);
-        }
-      }
-
-      &:hover {
-        [data-icon] path {
-          fill: var(--action-color-state);
-        }
-      }
-    }
-  }
-</style>
