@@ -10,7 +10,39 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
 <DefaultLayout title="Home">
   
   <Hero />
+  <div class="video-container">
+    <iframe
+      src="https://www.youtube.com/embed/V6_Etipuryo?autoplay=1&mute=1&loop=1&playlist=V6_Etipuryo"
+      title="Sordoceguera Documental"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </div>
   
+  <style>
+    .video-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: auto;
+      padding: 20px;
+    }
+  
+    .video-container iframe {
+      width: 80%;
+      height: 50vh; /* Se ajusta al 50% del alto de la pantalla */
+      max-width: 900px; /* Máximo ancho */
+    }
+  
+    @media (max-width: 768px) {
+      .video-container iframe {
+        width: 100%;
+        height: 40vh; /* Se reduce el alto en pantallas más pequeñas */
+      }
+    }
+  </style>
   <section class="inscription-section bg-gradient-to-b from-purple-900 to-purple-800 py-16">
     <div class="container mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white shadow-2xl rounded-2xl p-8 border border-purple-200">
