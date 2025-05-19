@@ -49,31 +49,33 @@ import { SkipLink } from 'accessible-astro-components'
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+    background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
     z-index: 1000;
+    padding-top: 0px;    // Añadido para reducir el espacio superior
+    padding-bottom: 0px; // Añadido para reducir el espacio inferior
   }
 
   header.animated-header.scrolled {
-    background-color: rgba(255, 255, 255, 1); /* Fondo sólido al hacer scroll */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
-    transform: translateY(0); /* Asegura que esté visible */
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
   }
 
   header.animated-header:not(.scrolled) {
-    transform: translateY(-20px); /* Desplazamiento inicial */
-    opacity: 0.9; /* Opacidad inicial */
+    transform: translateY(-20px);
+    opacity: 0.9;
   }
 
   .menu-item a {
     color: #333;
     text-decoration: none;
-    padding: 10px 10px;
+    padding: 4px 10px; // Reducido el padding vertical
     transition: color 0.3s ease;
   }
 
   .menu-item a:hover {
-    color: #7604b7; /* Color al pasar el cursor */
+    color: #7604b7;
   }
 </style>
