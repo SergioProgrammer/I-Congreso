@@ -53,7 +53,7 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
                 <option value="" disabled selected>Selecciona una opción</option>
                 <option value="General">General</option>
                 <option value="Socios">Socios</option>
-                <option value="Alumno ULL">Alumno ULL</option>
+                <option value="Alumno ULL">Estudiantes</option>
               </select>
             </div>
 
@@ -75,74 +75,40 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
         
         <!-- Cuadro de Tarifas de Inscripción (Izquierda) -->
         <div class="bg-white p-8 rounded-2xl shadow-2xl border border-purple-200 h-full">
-          <h2 class="text-2xl font-semibold text-purple-900">Tarifas de Inscripción HASTA el 30 de Mayo</h2>
-          <p class="text-purple-700 mb-6">Consulta los precios y selecciona la mejor opción.</p>
+          <h2 class="text-2xl font-semibold text-purple-900">Tarifas de Inscripción </h2>
+          <p class="text-purple-700 mb-6">Consulta los precios y elige la mejor opción.</p>
           <div class="overflow-hidden rounded-lg border border-purple-200 shadow-inner">
             <table class="w-full border-collapse text-purple-800">
               <thead>
                 <tr class="bg-purple-100">
                   <th class="p-4 border border-purple-200">Tipo</th>
-                  <th class="p-4 border border-purple-200">Congreso</th>
-                  <th class="p-4 border border-purple-200">Jornadas</th>
-                  <th class="p-4 border border-purple-200">Congreso y Jornadas</th>
+                  <th class="p-4 border border-purple-200">Congreso antes 31 Julio</th>
+                  <th class="p-4 border border-purple-200">Congreso a partir del 31 Julio</th>
+                  <th class="p-4 border border-purple-200">Online antes de 31 Julio</th>
+                  <th class="p-4 border border-purple-200">Online a partir del 31 Julio</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td class="p-4 border border-purple-200">🌍 Público general</td>
-                  <td class="p-4 border border-purple-200">100€</td>
-                  <td class="p-4 border border-purple-200">30€</td>
-                  <td class="p-4 border border-purple-200">130€</td>
-                </tr>
-                <tr>
-                  <td class="p-4 border border-purple-200">📌 Socios CNSE, FIAPAS, ONCE</td>
-                  <td class="p-4 border border-purple-200">40€</td>
-                  <td class="p-4 border border-purple-200">20€</td>
-                  <td class="p-4 border border-purple-200">60€</td>
-                </tr>
-                <tr>
-                  <td class="p-4 border border-purple-200">🎓 Alumnos ULL</td>
-                  <td class="p-4 border border-purple-200">30€</td>
-                  <td class="p-4 border border-purple-200">20€</td>
+                  <td class="p-4 border border-purple-200">150€</td>
+                  <td class="p-4 border border-purple-200">180€</td>
                   <td class="p-4 border border-purple-200">50€</td>
+                  <td class="p-4 border border-purple-200">80€</td>
                 </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Cuadro de Tarifas de Inscripción (Derecha) -->
-        <div class="bg-white p-8 rounded-2xl shadow-2xl border border-purple-200 h-full">
-          <h2 class="text-2xl font-semibold text-purple-900">Tarifas de Inscripción A PARTIR del 1 de Junio</h2>
-          <p class="text-purple-700 mb-6">Consulta los precios y selecciona la mejor opción.</p>
-          <div class="overflow-hidden rounded-lg border border-purple-200 shadow-inner">
-            <table class="w-full border-collapse text-purple-800">
-              <thead>
-                <tr class="bg-purple-100">
-                  <th class="p-4 border border-purple-200">Tipo</th>
-                  <th class="p-4 border border-purple-200">Congreso</th>
-                  <th class="p-4 border border-purple-200">Jornadas</th>
-                  <th class="p-4 border border-purple-200">Congreso y Jornadas</th>
-                </tr>
-              </thead>
-              <tbody>
                 <tr>
-                  <td class="p-4 border border-purple-200">🌍 Público general</td>
+                  <td class="p-4 border border-purple-200">📌 Profesionales</td>
+                  <td class="p-4 border border-purple-200">180€</td>
+                  <td class="p-4 border border-purple-200">220€</td>
+                  <td class="p-4 border border-purple-200">100€</td>
                   <td class="p-4 border border-purple-200">120€</td>
-                  <td class="p-4 border border-purple-200">50€</td>
-                  <td class="p-4 border border-purple-200">170€</td>
                 </tr>
                 <tr>
-                  <td class="p-4 border border-purple-200">📌 Socios CNSE, FIAPAS, ONCE</td>
-                  <td class="p-4 border border-purple-200">60€</td>
-                  <td class="p-4 border border-purple-200">40€</td>
+                  <td class="p-4 border border-purple-200">🎓 Estudiantes</td>
+                  <td class="p-4 border border-purple-200">80€</td>
                   <td class="p-4 border border-purple-200">100€</td>
-                </tr>
-                <tr>
-                  <td class="p-4 border border-purple-200">🎓 Alumnos ULL</td>
-                  <td class="p-4 border border-purple-200">50€</td>
-                  <td class="p-4 border border-purple-200">40€</td>
-                  <td class="p-4 border border-purple-200">70€</td>
+                  <td class="p-4 border border-purple-200">45€</td>
+                  <td class="p-4 border border-purple-200">60€</td>
                 </tr>
               </tbody>
             </table>
