@@ -1,10 +1,5 @@
 ---
-// Importación de componentes necesarios
 import DefaultLayout from '../layouts/DefaultLayout.astro'
-import Hero from '../components/Hero.astro'
-import Feature from '../components/Feature.astro'
-import Counter from '../components/Counter.astro'
-import ContentMedia from '../components/ContentMedia.astro'
 import { Accordion, AccordionItem } from 'accessible-astro-components'
 ---
 
@@ -51,8 +46,7 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
               <label for="type" class="block text-black font-medium">Tipo de inscripción</label>
               <select id="type" name="type" required class="w-full p-3 border border-purple-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition">
                 <option value="" disabled selected>Selecciona una opción</option>
-                <option value="General">General</option>
-                <option value="Socios">Socios</option>
+                <option value="General">General y Profesionales</option>
                 <option value="Alumno ULL">Estudiantes</option>
               </select>
             </div>
@@ -90,19 +84,13 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
               </thead>
               <tbody>
                 <tr>
-                  <td class="p-4 border border-purple-200">🌍 Público general</td>
+                  <td class="p-4 border border-purple-200">🌍 Público general y Profesionales</td>
                   <td class="p-4 border border-purple-200">150€</td>
                   <td class="p-4 border border-purple-200">180€</td>
                   <td class="p-4 border border-purple-200">50€</td>
                   <td class="p-4 border border-purple-200">80€</td>
                 </tr>
-                <tr>
-                  <td class="p-4 border border-purple-200">📌 Profesionales</td>
-                  <td class="p-4 border border-purple-200">180€</td>
-                  <td class="p-4 border border-purple-200">220€</td>
-                  <td class="p-4 border border-purple-200">100€</td>
-                  <td class="p-4 border border-purple-200">120€</td>
-                </tr>
+                
                 <tr>
                   <td class="p-4 border border-purple-200">🎓 Estudiantes</td>
                   <td class="p-4 border border-purple-200">80€</td>
