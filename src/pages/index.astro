@@ -1,7 +1,6 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro'
 import Hero from '../components/Hero.astro'
-import Feature from '../components/Feature.astro'
 import Counter from '../components/Counter.astro'
 import ContentMedia from '../components/ContentMedia.astro'
 import { Accordion, AccordionItem } from 'accessible-astro-components'
@@ -53,7 +52,7 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
   <div class="bg-white p-6 rounded-lg shadow-inner mt-6">
     <ol class="list-decimal pl-9 text-black space-y-4 text-lg">
       <li>Envía un correo a <b class="text-black">catavs@ull.edu.es</b> o rellena el formulario solicitando la inscripción.</li>
-      <li>En el asunto, incluye tu <b class="text-black">nombre completo</b> y <b class="text-black">DNI</b>.</li>
+      <li>En el asunto, incluye tu <b class="text-black">nombre completo</b> y <b class="text-black">DNI</b> además que <b class="text-black">tipo de inscripción</b> solicitas</li>
       <li>Verificaremos si quedan plazas disponibles.</li>
       <li>Recibirás un correo con los detalles y el número de cuenta para el pago.</li>
       <li class="text-red-700">⚠️ Las plazas estan limitadas a 220, se revisará el número de plazas disponibles y se le enviará un correo con el número de cuenta para que se realice el pago solicitado con las instrucciones. </li>
@@ -89,8 +88,7 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
               <select id="type" name="type" required class="w-full p-3 border border-purple-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition">
                 <option value="" disabled selected>Selecciona una opción</option>
                 <option value="General">General</option>
-                <option value="Socios">Socios</option>
-                <option value="Alumno ULL">Alumno ULL</option>
+                <option value="Alumno ULL">Estudiantes</option>
               </select>
             </div>
 
@@ -108,53 +106,74 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
       </div>
     </section>
   
-  <ContentMedia imgSrc="src/assets/img/aulario.jpg">
-    <h2>¿Dónde tendrá lugar?</h2>
-    <p class="text-2xl" id="location-text">
-      El evento se llevará a cabo en la Universidad de La Laguna, específicamente en el Aulario de Guajara, un espacio diseñado para albergar actividades académicas, conferencias y encuentros de diversa índole. Este recinto, conocido por su moderna infraestructura y su ubicación estratégica dentro del campus universitario, ofrecerá un entorno adecuado para el desarrollo del evento, facilitando la participación de estudiantes, docentes y demás asistentes interesados en la temática abordada.
-    </p>
-  </ContentMedia>
-  <ContentMedia imgSrc="src/assets/img/descarga.png" reverseImg={true} filter: brightness(0) invert(0);>
-    <h2>Horarios y fechas</h2>
-    <p class="text-2xl" id="schedule-text">
-      El horario exacto y las fechas oficiales del evento serán anunciados próximamente. Les recomendamos estar atentos a nuestras redes sociales y demás canales de comunicación, donde publicaremos toda la información actualizada en cuanto esté disponible. De esta manera, podrán planificar su asistencia con antelación y no perderse ningún detalle importante.
-    </p>
-  </ContentMedia>
+    
+    </section>
+  
+   <section style="margin: 2rem 0;">
+      <div class="flex flex-col md:flex-row gap-8 items-center md:items-start px-4 md:px-16 lg:px-32">
+        <div class="w-full md:w-1/2">
+          <h2 class="text-6xl mb-9 mt-5"> En el Aula Magna Facultad de Matemáticas</h2>
+          <p class="text-2xl mt-5" id="location-text" >
+            El evento se llevará a cabo en la Universidad de La Laguna, específicamente en el Aula Magna de Matemáticas, un espacio diseñado para albergar actividades académicas, conferencias y encuentros de diversa índole. Este recinto, conocido por su moderna infraestructura y su ubicación estratégica dentro del campus universitario, ofrecerá un entorno adecuado para el desarrollo del evento, facilitando la participación de estudiantes, docentes y demás asistentes interesados en la temática abordada.
+            <br>Ubicación: Avenida Astrofísico Francisco Sánchez S/N. 38206. San Cristóbal de La Laguna. Santa Cruz de Tenerife. Facultad de Física, Matemáticas y ETS de Ingeniería Civil e Industrial
+          </br>
+          </p>
+        </div>
+        <div class="w-full md:w-1/2 mt-8">
+          <iframe
+            src="https://www.google.com/maps?q=Aula+Magna+de+Matem%C3%A1ticas,+Universidad+de+La+Laguna&output=embed"
+            width="100%"
+            height="350"
+            style="border: 0; border-radius: 16px;"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación Universidad de La Laguna, Aula Magna de Matemáticas"
+          ></iframe>
+        </div>
+      </div>
+    </section>
 
   <section class="my-64">
     <div class="container grid grid-cols-1 gap-12 md:grid-cols-2">
       <div class="flex flex-col items-start gap-4">
-        <h2 class="text-6xl">Preguntas</h2>
+        <h2 class="text-6xl mb-10">Preguntas</h2>
         <p class="text-2xl" id="faq-text">
           En esta sección puedes consultar las dudas frecuentes por si te sirven de ayuda. En caso de no encontrar respuesta no dudes en consultarnos.
         </p>
-        <a class="button" href="https://www.instagram.com/catedradiscapacidadauditiva/">Contacta con nosotros</a>
+        <a class="button mt-7" href="https://www.instagram.com/catedradiscapacidadauditiva/">Contacta con nosotros</a>
       </div>
       <div class="space-content">
         <Accordion>
-          <AccordionItem name="exclusive" title="¿Cómo puedo asistir al congreso?" open>
+          <AccordionItem name="exclusive" title="¿A quién va dirigido?" open>
             <p>
-              respuesta
-            </p>
-          </AccordionItem>
-          <AccordionItem name="exclusive" title="¿Es necesario el pago de alguna entrada?">
-            <p>
-              respuesta
+             -Profesionales de la salud: Otorrinolaringología, audiología, logopedia, terapia ocupacional, psicología, fisioterapia y otras especialidades vinculadas a la re/habilitación auditiva.
+             -Profesionales de la educación: Profesorado, pedagogía, psicopedagogía, maestros/as de Audición y Lenguaje y/o de Pedagogía Terapéutica, orientadores/as, especialistas en lengua de signos española (ELSE), intérpretes de lenguas de signos, mediadores/as comunicativos, especialistas en educación inclusiva y profesionales de la enseñanza. 
+             -Personas sordas, con discapacidad auditiva, con sordoceguera y sus familias
+             -Investigadores y académicos: Profesorado universitario, lingüistas, psicólogos/as, expertos/as en accesibilidad, tecnología aplicada a la discapacidad auditiva y desarrollo de políticas inclusivas, traductores y subtituladores, etc.
+             -Instituciones públicas y entidades no gubernamentales: Organismos públicos y privados de la salud, la educación y los derechos humanos que trabajan en la inclusión de las personas sordas, con discapacidad auditiva y sordoceguera.
+             -Empresas y desarrolladores de tecnología: Fabricantes de dispositivos auditivos, creadores de software y aplicaciones de accesibilidad, e innovadores en tecnología de apoyo.
             </p>
           </AccordionItem>
           <AccordionItem name="exclusive" title="¿Puedo acudir solamente a las charlas que me interesen?">
             <p>
-              respuesta
+              Sí, puedes asistir únicamente a las charlas o actividades que sean de tu interés. La participación es flexible, por lo que no es obligatorio permanecer durante todo el evento. 
             </p>
           </AccordionItem>
           <AccordionItem name="exclusive" title="¿Que ocurre si se cancela el evento?">
             <p>
-              respuesta
+              En caso de cancelación del evento, se informará a todos los inscritos con la mayor antelación posible a través del correo electrónico y los canales oficiales del congreso. Si se hubieran realizado pagos o reservas, se proporcionará información detallada sobre las opciones de reembolso o reprogramación. Nuestro compromiso es garantizar la transparencia y minimizar cualquier inconveniente para los asistentes.
             </p>
           </AccordionItem>
-          <AccordionItem name="exclusive" title="¿Puedo dar yo alguna charla?">
+          <AccordionItem name="exclusive" title="¿Puedo asistir como ponente?">
             <p>
-              respuesta
+              Sí, puedes postularte como ponente siempre que tu propuesta esté relacionada con la temática del congreso. Para ello, debes enviar un resumen o abstract de tu intervención a través del formulario habilitado en la sección de Contribuciones. Todas las propuestas serán evaluadas por el comité organizador, que se pondrá en contacto contigo si tu intervención es seleccionada.
+            </p>
+          </AccordionItem>
+          <AccordionItem name="exclusive" title="¿Cuál es el objetivo del evento?">
+            <p>
+              Con este Congreso, buscamos dar respuesta a la creciente necesidad de actualización y formación por parte de profesionales que trabajan en el ámbito de la sordera, discapacidad auditiva y sordoceguera. 
+              Nuestro objetivo es proporcionar un espacio de intercambio de conocimientos, experiencias y buenas prácticas, ofreciendo información actualizada sobre los avances más recientes en educación, lenguas de signos, accesibilidad, re/habilitación auditiva, tecnología, etc. Además, este evento servirá como punto de encuentro para fortalecer la colaboración entre especialistas, fomentar el desarrollo de nuevas estrategias de intervención y promover un enfoque inclusivo que mejore la calidad de vida de las personas sordas, con discapacidad auditiva y sordoceguera.
             </p>
           </AccordionItem>
         </Accordion>
@@ -165,10 +184,10 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
     <div class="container">
       <h2 class="mb-16 text-6xl text-center">No te puedes perder</h2>
       <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
-        <Counter count="15" title="ponentes" sub="expertos" />
-        <Counter count="+20" title="horas" sub="de charlas" />
-        <Counter count="30" title="temas" sub="a tratar" />
-        <Counter count="+100" title="invitados" sub="en total" />
+        <Counter count="3" title="días" sub="de evento" />
+        <Counter count="27" title="ponentes" sub="expertos" />
+        <Counter count="29" title="Ponencias" sub="en total" />
+        <Counter count="+200" title="inscripciones" sub="disponibles" />
       </div>
     </div>
   </section>
