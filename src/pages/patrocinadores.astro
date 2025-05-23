@@ -20,7 +20,7 @@ import DefaultLayout from '../layouts/DefaultLayout.astro';
       </div>
       <div class="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {Array.from({ length: 21 }, (_, i) => {
-          if (i + 1 === 11) return null; // omit image11 (already used in Financia)
+          if (i + 1 === 11) return null; // omite image11 (utilizada en Financia)
           return (
             <div class="sponsor-card">
               <img src={`/img/image${i + 1}.png`} alt={`Patrocinador ${i + 1}`} class="sponsor-logo1" />
