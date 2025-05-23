@@ -4,25 +4,92 @@ import DefaultLayout from '../layouts/DefaultLayout.astro';
 <DefaultLayout title="Contribuciones">
   <section class="inscription-section bg-gradient-to-b from-purple-900 to-purple-800 py-16 mt-11">
     <div class="container mx-auto px-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white shadow-2xl rounded-2xl p-8 border border-purple-200">
+      <div class="bg-white shadow-2xl rounded-2xl p-8 border border-purple-200">
 
-        <!-- Texto descriptivo -->
-        <div>
-          <h2 class="text-4xl font-bold text-black text-center">¿Cómo envío mi proyecto?</h2>
-          <p class="text-lg text-black mt-3 text-center">Para participar, sigue estos pasos:</p>
-          <div class="bg-white p-6 rounded-lg shadow-inner mt-6">
-            <ol class="list-decimal pl-9 text-black space-y-4 text-lg">
-              <li>Accede al formulario de Google Forms a través del botón.</li>
-              <li>Completa todos los campos obligatorios del formulario.</li>
-              <li>Recibirás un correo confirmando la recepción del proyecto. Nos pondremos en contacto si es apto.</li>
-            </ol>
-          </div>
+        <h2 class="text-4xl font-bold text-black text-center mb-6">Contribuciones</h2>
+        <p class="text-lg text-black mb-6 text-center">
+          Se podrán presentar comunicaciones en modalidad online, en español e inglés, que se alineen con las temáticas del congreso y que aborden resultados de investigaciones, experiencias, propuestas didácticas o reflexiones pedagógicas. Estas comunicaciones serán evaluadas por el Comité Científico, quien determinará su aceptación. Los autores de las propuestas aprobadas recibirán los certificados correspondientes, y todas las comunicaciones aceptadas serán publicadas en acceso abierto como capítulos de libro en la Editorial Dykinson (Q1 SPI, Norwegian List nivel 1). El título del libro será: <b>"Sordera, Discapacidad Auditiva y Sordoceguera en el Siglo XXI: Desafíos, Innovaciones y Caminos por Recorrer"</b>.
+        </p>
+        <ul class="list-disc pl-8 text-black mb-6 text-lg space-y-2">
+          <li>Los resúmenes se podrán enviar hasta el <b>30 de agosto</b> a través del formulario online disponible en la web.</li>
+          <li>El Comité Científico informará sobre la aceptación en un plazo de 3 días desde la recepción del resumen.</li>
+          <li>Los autores tendrán hasta el <b>20 de septiembre</b> para enviar el texto completo (7 páginas, plantilla Word que se enviará por email).</li>
+          <li>Tras enviar el texto completo, la organización facilitará un certificado de aceptación del capítulo, indicando editorial, ISBN y proceso de publicación.</li>
+          <li>No es necesario que el título de la comunicación sea el mismo que el del capítulo.</li>
+          <li>En la fecha del congreso se habilitará una plataforma para la presentación online de los trabajos.</li>
+          <li>Número máximo de autores por comunicación: <b>4</b>.</li>
+          <li>Cada autor podrá participar en un máximo de <b>2 comunicaciones</b> y solo abonará una vez la cuota de participación. Todos los autores deben abonar la cuota.</li>
+          <li>Al enviar el resumen mediante el formulario, no se recibe correo de confirmación. Si en 5 días hábiles no hay respuesta, escribir a <a href="mailto:catavs@ull.edu.es" class="text-purple-700 hover:underline">catavs@ull.edu.es</a>.</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-purple-900 mb-4 mt-8 text-center">Temáticas para presentar comunicaciones</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-black text-lg mb-8">
+          <ul class="list-disc pl-6 space-y-2">
+            <li><b>Diagnóstico, Intervención y Rehabilitación</b>
+              <ul class="list-disc pl-6">
+                <li>Nuevos enfoques en el diagnóstico precoz de la sordera y sordoceguera.</li>
+                <li>Avances en audiología clínica y técnicas de evaluación audiológica.</li>
+                <li>Intervenciones tempranas y su impacto en el desarrollo comunicativo.</li>
+                <li>Re/habilitación auditiva en niños y adultos.</li>
+                <li>Terapia Auditivo Verbal™.</li>
+              </ul>
+            </li>
+            <li><b>Educación Inclusiva y Accesibilidad</b>
+              <ul class="list-disc pl-6">
+                <li>Metodologías inclusivas en contextos educativos para estudiantes sordos y sordociegos.</li>
+                <li>Diseño y uso de materiales didácticos accesibles.</li>
+                <li>Tecnologías de apoyo en entornos escolares y universitarios.</li>
+                <li>Formación docente en discapacidad auditiva y sordoceguera.</li>
+              </ul>
+            </li>
+            <li><b>Lengua de Signos</b>
+              <ul class="list-disc pl-6">
+                <li>Innovaciones en la enseñanza y difusión de la lengua de signos.</li>
+                <li>Traducción e interpretación en lengua de signos: retos y buenas prácticas.</li>
+                <li>Estrategias de comunicación alternativa y aumentativa para personas sordociegas.</li>
+                <li>Análisis sociolingüístico y cultural de las comunidades sordas y sordociegas.</li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="list-disc pl-6 space-y-2">
+            <li><b>Tecnologías de Apoyo e Innovación</b>
+              <ul class="list-disc pl-6">
+                <li>Dispositivos de ayuda auditiva: audífonos, implantes cocleares y sistemas de FM.</li>
+                <li>Aplicaciones móviles y plataformas digitales accesibles.</li>
+                <li>Inteligencia artificial y accesibilidad comunicativa.</li>
+              </ul>
+            </li>
+            <li><b>Derechos, Políticas Públicas y Participación Social</b>
+              <ul class="list-disc pl-6">
+                <li>Legislación internacional y local sobre discapacidad auditiva y sordoceguera.</li>
+                <li>Acceso a la información, cultura y entretenimiento inclusivo.</li>
+                <li>Participación ciudadana y liderazgo de personas sordas y sordociegas.</li>
+                <li>Buenas prácticas en servicios públicos, salud y justicia.</li>
+              </ul>
+            </li>
+            <li><b>Investigación y Nuevas Perspectivas</b>
+              <ul class="list-disc pl-6">
+                <li>Estudios recientes en genética de la sordera y sordoceguera.</li>
+                <li>Impacto psicosocial y calidad de vida en personas sordas y sordociegas.</li>
+              </ul>
+            </li>
+            <li><b>Voz, Oralidad y Comunicación Multimodal</b>
+              <ul class="list-disc pl-6">
+                <li>Evaluación y rehabilitación de la voz en personas con discapacidad auditiva.</li>
+                <li>Entrenamiento vocal y oralismo en contextos educativos y terapéuticos.</li>
+                <li>La voz en usuarios de implante coclear y su impacto en la identidad comunicativa.</li>
+                <li>Estrategias multimodales de comunicación.</li>
+                <li>Alteraciones de la voz en sordera adquirida y su abordaje logopédico.</li>
+                <li>Estudios acústicos y perceptivos de la voz en población con discapacidad auditiva y sordoceguera.</li>
+              </ul>
+            </li>
+          </ul>
         </div>
 
         <!-- Botón hacia Google Form -->
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center mt-8">
           <h3 class="text-2xl font-semibold text-purple-900 mb-4">Formulario de Envío</h3>
-          <p class="text-black mb-6 text-center">Haz clic en el botón para acceder al formulario y enviar tu proyecto.</p>
+          <p class="text-black mb-6 text-center">Haz clic en el botón para acceder al formulario y enviar tu resumen.</p>
           <a href="https://docs.google.com/forms/d/1abcdEFGHijklmnopQRStuvWxYz/viewform" target="_blank" rel="noopener noreferrer"
              class="bg-purple-100 hover:bg-purple-700 text-black font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition">
             Ir al Formulario
