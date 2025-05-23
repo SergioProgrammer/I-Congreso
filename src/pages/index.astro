@@ -9,6 +9,7 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
 <DefaultLayout title="Home">
   
   <Hero />
+  <!--
   <div class="video-container">
     <iframe
       src="https://www.youtube.com/embed/V6_Etipuryo?autoplay=1&mute=1&loop=1&playlist=V6_"
@@ -17,7 +18,7 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
       allowfullscreen
     ></iframe>
   </div>
-  
+-->
   <style>
     .video-container {
       display: flex;
@@ -41,101 +42,105 @@ import { Accordion, AccordionItem } from 'accessible-astro-components'
       }
     }
   </style>
-  <section class="inscription-section bg-gradient-to-b from-purple-900 to-purple-800 py-16">
-    <div class="container mx-auto px-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white shadow-2xl rounded-2xl p-8 border border-purple-200">
 
-        <!-- Texto descriptivo -->
-<div>
-  <h2 class="text-4xl font-bold text-black text-center">¿Cómo inscribirse?</h2>
-  <p class="text-lg text-black mt-3 text-center">Para formar parte de este evento único, sigue estos pasos:</p>
-  <div class="bg-white p-6 rounded-lg shadow-inner mt-6">
-    <ol class="list-decimal pl-9 text-black space-y-4 text-lg">
-      <li>Envía un correo a <b class="text-black">catavs@ull.edu.es</b> o rellena el formulario solicitando la inscripción.</li>
-      <li>En el asunto, incluye tu <b class="text-black">nombre completo</b> y <b class="text-black">DNI</b> además que <b class="text-black">tipo de inscripción</b> solicitas</li>
-      <li>Verificaremos si quedan plazas disponibles.</li>
-      <li>Recibirás un correo con los detalles y el número de cuenta para el pago.</li>
-      <li class="text-red-700">⚠️ Las plazas estan limitadas a 220, se revisará el número de plazas disponibles y se le enviará un correo con el número de cuenta para que se realice el pago solicitado con las instrucciones. </li>
-    </ol>
-    <div class="mt-11 mb-1">
-      <a href="/inscripciones/" class="block text-center bg-purple-100 text-white py-1.5 px-3 w-32 rounded-lg hover:bg-purple-400 transition-all shadow-lg hover:shadow-xl">Ver Tarifas</a>
+
+  <section class="my-24">
+    <div class="container mx-auto px-4 md:px-16 lg:px-32">
+      <h2 class="text-4xl font-bold text-center mb-10 text-purple-900">Precio de matriculación del Congreso</h2>
+      <div class="overflow-x-auto mb-12">
+        <table class="min-w-[700px] w-full bg-white border border-purple-200 rounded-lg shadow text-base">
+          <thead>
+            <tr>
+              <th class="py-3 px-2 bg-purple-100 text-purple-900 font-semibold border-b border-purple-200 text-center" rowspan="2">Tipo de matrícula</th>
+              <th class="py-3 px-2 bg-purple-100 text-purple-900 font-semibold border-b border-purple-200 text-center" colspan="2">Presencial</th>
+              <th class="py-3 px-2 bg-purple-100 text-purple-900 font-semibold border-b border-purple-200 text-center" colspan="2">Online</th>
+            </tr>
+            <tr>
+              <th class="py-2 px-2 bg-purple-50 text-purple-900 font-semibold border-b border-purple-200 text-center">Antes del 31 de julio</th>
+              <th class="py-2 px-2 bg-purple-50 text-purple-900 font-semibold border-b border-purple-200 text-center">Después del 31 de julio</th>
+              <th class="py-2 px-2 bg-purple-50 text-purple-900 font-semibold border-b border-purple-200 text-center">Antes del 31 de julio</th>
+              <th class="py-2 px-2 bg-purple-50 text-purple-900 font-semibold border-b border-purple-200 text-center">Después del 31 de julio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="py-2 px-2 border-b border-purple-100 text-center">Público General</td>
+              <td class="py-2 px-2 border-b border-purple-100 text-center">150€</td>
+              <td class="py-2 px-2 border-b border-purple-100 text-center">180€</td>
+              <td class="py-2 px-2 border-b border-purple-100 text-center">50€</td>
+              <td class="py-2 px-2 border-b border-purple-100 text-center">80€</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-2 border-b border-purple-100 text-center">Estudiantes</td>
+              <td class="py-2 px-2 border-b border-purple-100 text-center">80€</td>
+              <td class="py-2 px-2 border-b border-purple-100 text-center">100€</td>
+              <td class="py-2 px-2 border-b border-purple-100 text-center">45€</td>
+              <td class="py-2 px-2 border-b border-purple-100 text-center">60€</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="text-3xl font-semibold text-purple-900 mb-6 text-center">Precio de matrícula de los Talleres</h3>
+      <div class="overflow-x-auto mb-12">
+        <table class="min-w-[500px] w-full bg-white border border-purple-200 rounded-lg shadow text-base">
+          <thead>
+            <tr>
+              <th class="py-3 px-2 bg-purple-100 text-purple-900 font-semibold border-b border-purple-200 text-center">Taller</th>
+              <th class="py-3 px-2 bg-purple-100 text-purple-900 font-semibold border-b border-purple-200 text-center">Precio Alumnado</th>
+              <th class="py-3 px-2 bg-purple-100 text-purple-900 font-semibold border-b border-purple-200 text-center">Precio Profesionales</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="py-2 px-2 border-b border-purple-100 text-center">
+                Taller El Papel de la Fisioterapia en la Recuperación Funcional de Personas con Discapacidad Auditiva: Abordaje del vértigo, mareo y equilibrio.<br/>
+                <span class="italic text-xs text-purple-700">*30 plazas disponibles por taller*</span>
+              </td>
+              <td class="py-2 px-2 border-b border-purple-100 text-center">60€</td>
+              <td class="py-2 px-2 border-b border-purple-100 text-center">100€</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-2 border-b border-purple-100 text-center">
+                Taller práctico de la mejora de la calidad vocal<br/>
+                <span class="italic text-xs text-purple-700">*30 plazas disponibles por taller*</span>
+              </td>
+              <td class="py-2 px-2 border-b border-purple-100 text-center">30€</td>
+              <td class="py-2 px-2 border-b border-purple-100 text-center">50€</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-    
+  </section>
+
+   <section>
+  <div class="flex flex-col md:flex-row gap-8 items-center md:items-start px-4 md:px-16 lg:px-32 bg-violet-700 py-20 rounded-b-3xl">
+    <div class="w-full md:w-1/2">
+      <h2 class="text-6xl mb-6 mt-2 text-white">En el Aula Magna Facultad de Matemáticas</h2>
+      <p class="text-2xl mt-5 text-white" id="location-text">
+        El evento se llevará a cabo en la Universidad de La Laguna, específicamente en el Aula Magna de Matemáticas, un espacio diseñado para albergar actividades académicas, conferencias y encuentros de diversa índole. Este recinto, conocido por su moderna infraestructura y su ubicación estratégica dentro del campus universitario, ofrecerá un entorno adecuado para el desarrollo del evento, facilitando la participación de estudiantes, docentes y demás asistentes interesados en la temática abordada.
+        <br>Ubicación: Avenida Astrofísico Francisco Sánchez S/N. 38206. San Cristóbal de La Laguna. Santa Cruz de Tenerife. Facultad de Física, Matemáticas y ETS de Ingeniería Civil e Industrial</br>
+      </p>
+    </div>
+    <div class="w-full md:w-1/2 mt-8">
+      <iframe
+        src="https://www.google.com/maps?q=Aula+Magna+de+Matem%C3%A1ticas,+Universidad+de+La+Laguna&output=embed"
+        width="100%"
+        height="350"
+        style="border: 0; border-radius: 16px;"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Ubicación Universidad de La Laguna, Aula Magna de Matemáticas"
+      ></iframe>
+    </div>
   </div>
-</div>
+</section>
 
-        <!-- Formulario de inscripción -->
-        <div class="bg-white p-8 rounded-2xl shadow-md border border-purple-200">
-          <h2 class="text-2xl font-semibold text-purple-900">Inscríbete Ahora</h2>
-          <p class="text-black mb-6">Completa el formulario y te enviaremos los detalles por correo.</p>
-          
-          <form action="https://formsubmit.co/catavs@ull.edu.es" method="POST" class="space-y-6">
-            <!-- Nombre -->
-            <div>
-              <label for="name" class="block text-black font-medium">Nombre y Apellidos</label>
-              <input type="text" id="name" name="name" required placeholder="Escribe tu nombre completo" class="w-full p-3 border border-purple-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition" />
-            </div>
-
-            <!-- DNI -->  
-            <div>
-              <label for="dni" class="block text-black font-medium">DNI</label>
-              <input type="text" id="dni" name="dni" required placeholder="Escribe tu DNI" class="w-full p-3 border border-purple-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition" />
-            </div>
-
-            <!-- Tipo de inscripción -->
-            <div>
-              <label for="type" class="block text-black font-medium">Tipo de inscripción</label>
-              <select id="type" name="type" required class="w-full p-3 border border-purple-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition">
-                <option value="" disabled selected>Selecciona una opción</option>
-                <option value="General">General</option>
-                <option value="Alumno ULL">Estudiantes</option>
-              </select>
-            </div>
-
-            <!-- Correo Electrónico -->
-            <div>
-              <label for="email" class="block text-black font-medium">Correo Electrónico</label>
-              <input type="email" id="email" name="email" required placeholder="Tu correo electrónico" class="w-full p-3 border border-purple-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition" />
-            </div>
-
-
-            <!-- Botón de envío -->
-            <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-all shadow-lg hover:shadow-xl">Enviar Inscripción</button>
-          </form>
-        </div>
-      </div>
-    </section>
-  
-    
-    </section>
-  
-   <section style="margin: 2rem 0;">
-      <div class="flex flex-col md:flex-row gap-8 items-center md:items-start px-4 md:px-16 lg:px-32">
-        <div class="w-full md:w-1/2">
-          <h2 class="text-6xl mb-9 mt-5"> En el Aula Magna Facultad de Matemáticas</h2>
-          <p class="text-2xl mt-5" id="location-text" >
-            El evento se llevará a cabo en la Universidad de La Laguna, específicamente en el Aula Magna de Matemáticas, un espacio diseñado para albergar actividades académicas, conferencias y encuentros de diversa índole. Este recinto, conocido por su moderna infraestructura y su ubicación estratégica dentro del campus universitario, ofrecerá un entorno adecuado para el desarrollo del evento, facilitando la participación de estudiantes, docentes y demás asistentes interesados en la temática abordada.
-            <br>Ubicación: Avenida Astrofísico Francisco Sánchez S/N. 38206. San Cristóbal de La Laguna. Santa Cruz de Tenerife. Facultad de Física, Matemáticas y ETS de Ingeniería Civil e Industrial
-          </br>
-          </p>
-        </div>
-        <div class="w-full md:w-1/2 mt-8">
-          <iframe
-            src="https://www.google.com/maps?q=Aula+Magna+de+Matem%C3%A1ticas,+Universidad+de+La+Laguna&output=embed"
-            width="100%"
-            height="350"
-            style="border: 0; border-radius: 16px;"
-            allowfullscreen
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Ubicación Universidad de La Laguna, Aula Magna de Matemáticas"
-          ></iframe>
-        </div>
-      </div>
-    </section>
 
   <section class="my-64">
-    <div class="container grid grid-cols-1 gap-12 md:grid-cols-2">
+    <div class="container grid grid-cols-1 gap-12 md:grid-cols-2 mt-0">
       <div class="flex flex-col items-start gap-4">
         <h2 class="text-6xl mb-10">Preguntas</h2>
         <p class="text-2xl" id="faq-text">
