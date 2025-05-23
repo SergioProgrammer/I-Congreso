@@ -1,109 +1,145 @@
 ---
-import DefaultLayout from '../layouts/DefaultLayout.astro'
-import { Accordion, AccordionItem } from 'accessible-astro-components'
+import DefaultLayout from '../layouts/DefaultLayout.astro';
 ---
-
-<DefaultLayout title="Home">
-<section class="inscription-section bg-gradient-to-b from-purple-900 to-purple-800 py-16">
+<DefaultLayout title="Contribuciones">
+  <section class="inscription-section bg-gradient-to-b from-purple-900 to-purple-800 py-16 mt-11">
     <div class="container mx-auto px-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white shadow-2xl rounded-2xl p-8 border border-purple-200 mb-16 mt-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white shadow-2xl rounded-2xl p-8 border border-purple-200">
 
-        <!-- Texto descriptivo -->
-<div>
-  <h2 class="text-4xl font-bold text-black text-center">¿Cómo inscribirse?</h2>
-  <p class="text-lg text-black mt-3 text-center">Para formar parte de este evento único, sigue estos pasos:</p>
-  <div class="bg-white p-6 rounded-lg shadow-inner mt-6">
-    <ol class="list-decimal pl-9 text-black space-y-4 text-lg">
-      <li>Envía un correo a <b class="text-black">catavs@ull.edu.es</b> o rellena el formulario solicitando la inscripción.</li>
-      <li>En el asunto, incluye tu <b class="text-black">nombre completo</b> y <b class="text-black">DNI</b>.</li>
-      <li>Verificaremos si quedan plazas disponibles.</li>
-      <li>Recibirás un correo con los detalles y el número de cuenta para el pago.</li>
-      <li class="text-red-700">⚠️ Las plazas del congreso estan limitadas a 220, se revisará el número de plazas disponibles y se le enviará un correo con el número de cuenta para que se realice el pago solicitado con las instrucciones. </li>
-    </ol>
-  </div>
-</div>
-
-        <!-- Formulario de inscripción -->
-        <div class="bg-white p-8 rounded-2xl shadow-md border border-purple-200">
-          <h2 class="text-2xl font-semibold text-purple-900">Inscríbete Ahora</h2>
-          <p class="text-black mb-6">Completa el formulario y te enviaremos los detalles por correo.</p>
-          
-          <form action="https://formsubmit.co/catavs@ull.edu.es" method="POST" class="space-y-6">
-            <!-- Nombre -->
-            <div>
-              <label for="name" class="block text-black font-medium">Nombre y Apellidos</label>
-              <input type="text" id="name" name="name" required placeholder="Escribe tu nombre completo" class="w-full p-3 border border-purple-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition" />
-            </div>
-
-            <!-- DNI -->  
-            <div>
-              <label for="dni" class="block text-black font-medium">DNI</label>
-              <input type="text" id="dni" name="dni" required placeholder="Escribe tu DNI" class="w-full p-3 border border-purple-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition" />
-            </div>
-
-            <!-- Tipo de inscripción -->
-            <div>
-              <label for="type" class="block text-black font-medium">Tipo de inscripción</label>
-              <select id="type" name="type" required class="w-full p-3 border border-purple-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition">
-                <option value="" disabled selected>Selecciona una opción</option>
-                <option value="General">General y Profesionales</option>
-                <option value="Alumno ULL">Estudiantes</option>
-              </select>
-            </div>
-
-            <!-- Correo Electrónico -->
-            <div>
-              <label for="email" class="block text-black font-medium">Correo Electrónico</label>
-              <input type="email" id="email" name="email" required placeholder="Tu correo electrónico" class="w-full p-3 border border-purple-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition" />
-            </div>
-
-
-            <!-- Botón de envío -->
-            <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-all shadow-lg hover:shadow-xl">Enviar Inscripción</button>
-          </form>
+        <!-- Información de matriculación -->
+        <div>
+          <h2 class="text-4xl font-bold text-black text-center mb-6">¿Cómo realizar la matrícula?</h2>
+          <div class="bg-white p-6 rounded-lg shadow-inner mt-6">
+            <ol class="list-decimal pl-9 text-black space-y-4 text-lg">
+              <li>
+                <b>Presencialmente:</b> De lunes a viernes de 9:00 a 14:00 y lunes y martes de 16:30 a 19:00, en la Secretaría de la FGULL:<br/>
+                Avenida de la Trinidad, 61. Aulario de la Torre Profesor Agustín Arévalo, planta 0. Campus Central de la Universidad de La Laguna. CP. 38071 La Laguna. Tenerife, Islas Canarias.<br/>
+                Tel: <a href="tel:+34922319200" class="text-purple-700 hover:underline">+34 922 319200</a><br/>
+                Fax: +34 922 319197<br/>
+                E-mail: <a href="mailto:secretaria@fg.ull.es" class="text-purple-700 hover:underline">secretaria@fg.ull.es</a><br/>
+                Web: <a href="https://www.fg.ull.es" target="_blank" class="text-purple-700 hover:underline">www.fg.ull.es</a>
+              </li>
+              <li>
+                <b>Online:</b> A través del Portal Servicios:<br/>
+                <a href="https://sede.fg.ull.es/servicios/" target="_blank" class="text-purple-700 hover:underline">https://sede.fg.ull.es/servicios/</a>
+              </li>
+              <li>
+                <b>Pago de la matrícula:</b>
+                <ul class="list-disc pl-6 mt-2">
+                  <li>
+                    <b>Pago online seguro con tarjeta:</b>
+                    <a href="https://sede.fg.ull.es/servicios/PagoOnline.aspx?ref=160006424976&amp;am=3.400,00&amp;lang=2" target="_blank" class="text-purple-700 hover:underline">Pagar online</a>
+                  </li>
+                  <li>
+                    <b>Otras formas de pago:</b>
+                    <ul class="list-disc pl-6">
+                      <li>Con tarjeta en el Portal Servicios: <a href="https://sede.fg.ull.es" target="_blank" class="text-purple-700 hover:underline">https://sede.fg.ull.es</a></li>
+                      <li>En la secretaría de la Fundación</li>
+                      <li>A través de entidades bancarias con convenio. Más información: <a href="https://www.fg.ull.es/pagos" target="_blank" class="text-purple-700 hover:underline">www.fg.ull.es/pagos</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Una vez realizado el abono usted queda efectivamente matriculado, por lo que <b>NO tiene que volver a pasar por nuestras instalaciones</b>. Si no realiza el abono en el tiempo estipulado, se anulará su matrícula.
+              </li>
+              <li>
+                Si el período de matrícula ha finalizado y está interesado en el Congreso, contacte con la Secretaría de la Fundación para recibir instrucciones.
+              </li>
+            </ol>
+          </div>
         </div>
-      </div>
 
-      <!-- Sección de Tarifas -->
-      <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-        
-        <!-- Cuadro de Tarifas de Inscripción (Izquierda) -->
-        <div class="bg-white p-8 rounded-2xl shadow-2xl border border-purple-200 h-full">
-          <h2 class="text-2xl font-semibold text-purple-900">Tarifas de Inscripción </h2>
-          <p class="text-purple-700 mb-6">Consulta los precios y elige la mejor opción.</p>
-          <div class="overflow-hidden rounded-lg border border-purple-200 shadow-inner">
-            <table class="w-full border-collapse text-purple-800">
+        <!-- Contacto y enlaces útiles y tablas de precios detallados -->
+        <div class="flex flex-col items-center w-full">
+
+          <!-- Tabla de precios de matrícula del Congreso -->
+          <h3 class="text-2xl font-semibold text-purple-900 mb-4 mt-4 text-center">Precio de matriculación del Congreso</h3>
+          <div class="overflow-x-auto w-full mb-8">
+            <table class="min-w-[700px] w-full bg-white border border-purple-200 rounded-lg shadow text-sm">
               <thead>
-                <tr class="bg-purple-100">
-                  <th class="p-4 border border-purple-200">Tipo</th>
-                  <th class="p-4 border border-purple-200">Congreso antes 31 Julio</th>
-                  <th class="p-4 border border-purple-200">Congreso a partir del 31 Julio</th>
-                  <th class="p-4 border border-purple-200">Online antes de 31 Julio</th>
-                  <th class="p-4 border border-purple-200">Online a partir del 31 Julio</th>
+                <tr>
+                  <th class="py-3 px-2 bg-purple-100 text-purple-900 font-semibold border-b border-purple-200 text-center" rowspan="2">Tipo de matrícula</th>
+                  <th class="py-3 px-2 bg-purple-100 text-purple-900 font-semibold border-b border-purple-200 text-center" colspan="2">Presencial</th>
+                  <th class="py-3 px-2 bg-purple-100 text-purple-900 font-semibold border-b border-purple-200 text-center" colspan="2">Online</th>
+                </tr>
+                <tr>
+                  <th class="py-2 px-2 bg-purple-50 text-purple-900 font-semibold border-b border-purple-200 text-center">Antes del 31 de julio</th>
+                  <th class="py-2 px-2 bg-purple-50 text-purple-900 font-semibold border-b border-purple-200 text-center">Después del 31 de julio</th>
+                  <th class="py-2 px-2 bg-purple-50 text-purple-900 font-semibold border-b border-purple-200 text-center">Antes del 31 de julio</th>
+                  <th class="py-2 px-2 bg-purple-50 text-purple-900 font-semibold border-b border-purple-200 text-center">Después del 31 de julio</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="p-4 border border-purple-200">🌍 Público general y Profesionales</td>
-                  <td class="p-4 border border-purple-200">150€</td>
-                  <td class="p-4 border border-purple-200">180€</td>
-                  <td class="p-4 border border-purple-200">50€</td>
-                  <td class="p-4 border border-purple-200">80€</td>
+                  <td class="py-2 px-2 border-b border-purple-100 text-center">Público General</td>
+                  <td class="py-2 px-2 border-b border-purple-100 text-center">150€</td>
+                  <td class="py-2 px-2 border-b border-purple-100 text-center">180€</td>
+                  <td class="py-2 px-2 border-b border-purple-100 text-center">50€</td>
+                  <td class="py-2 px-2 border-b border-purple-100 text-center">80€</td>
                 </tr>
-                
                 <tr>
-                  <td class="p-4 border border-purple-200">🎓 Estudiantes</td>
-                  <td class="p-4 border border-purple-200">80€</td>
-                  <td class="p-4 border border-purple-200">100€</td>
-                  <td class="p-4 border border-purple-200">45€</td>
-                  <td class="p-4 border border-purple-200">60€</td>
+                  <td class="py-2 px-2 border-b border-purple-100 text-center">Estudiantes</td>
+                  <td class="py-2 px-2 border-b border-purple-100 text-center">80€</td>
+                  <td class="py-2 px-2 border-b border-purple-100 text-center">100€</td>
+                  <td class="py-2 px-2 border-b border-purple-100 text-center">45€</td>
+                  <td class="py-2 px-2 border-b border-purple-100 text-center">60€</td>
                 </tr>
               </tbody>
             </table>
           </div>
+
+          <!-- Tabla de precios de talleres -->
+          <h3 class="text-2xl font-semibold text-purple-900 mb-4 mt-8 text-center">Precio de matrícula de los Talleres</h3>
+          <div class="overflow-x-auto w-full mb-8">
+            <table class="min-w-[500px] w-full bg-white border border-purple-200 rounded-lg shadow text-sm">
+              <thead>
+                <tr>
+                  <th class="py-3 px-2 bg-purple-100 text-purple-900 font-semibold border-b border-purple-200 text-center">Taller</th>
+                  <th class="py-3 px-2 bg-purple-100 text-purple-900 font-semibold border-b border-purple-200 text-center">Precio Alumnado</th>
+                  <th class="py-3 px-2 bg-purple-100 text-purple-900 font-semibold border-b border-purple-200 text-center">Precio Profesionales</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="py-2 px-2 border-b border-purple-100 text-center">
+                    Taller El Papel de la Fisioterapia en la Recuperación Funcional de Personas con Discapacidad Auditiva: Abordaje del vértigo, mareo y equilibrio.<br/>
+                    <span class="italic text-xs text-purple-700">*30 plazas disponibles por taller*</span>
+                  </td>
+                  <td class="py-2 px-2 border-b border-purple-100 text-center">60€</td>
+                  <td class="py-2 px-2 border-b border-purple-100 text-center">100€</td>
+                </tr>
+                <tr>
+                  <td class="py-2 px-2 border-b border-purple-100 text-center">
+                    Taller práctico de la mejora de la calidad vocal<br/>
+                    <span class="italic text-xs text-purple-700">*30 plazas disponibles por taller*</span>
+                  </td>
+                  <td class="py-2 px-2 border-b border-purple-100 text-center">30€</td>
+                  <td class="py-2 px-2 border-b border-purple-100 text-center">50€</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Contacto y enlaces útiles -->
+          <h3 class="text-2xl font-semibold text-purple-900 mb-4 mt-8">Contacto y enlaces útiles</h3>
+          <ul class="text-black text-lg space-y-2 text-center mb-4">
+            <li>
+              <b>Secretaría FGULL</b><br/>
+              <a href="mailto:secretaria@fg.ull.es" class="text-purple-700 hover:underline">secretaria@fg.ull.es</a>
+            </li>
+            <li>
+              <a href="https://www.fg.ull.es" target="_blank" class="text-purple-700 hover:underline">www.fg.ull.es</a>
+            </li>
+            <li>
+              <a href="https://sede.fg.ull.es/servicios/" target="_blank" class="text-purple-700 hover:underline">Portal Servicios</a>
+            </li>
+            <li>
+              <a href="https://www.fg.ull.es/pagos" target="_blank" class="text-purple-700 hover:underline">Información sobre pagos</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
-  
 </DefaultLayout>
