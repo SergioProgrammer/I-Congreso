@@ -1,0 +1,58 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+---
+<DefaultLayout title="Alojamiento">
+  <section class="inscription-section bg-gradient-to-b from-purple-900 to-purple-800 py-16">
+    <div class="container mx-auto px-6">
+      <div class="bg-white shadow-2xl rounded-2xl p-8 border border-purple-200 mt-16">
+        <!-- Título y descripción -->
+        <div class="text-center mb-10">
+          <h2 class="text-4xl font-bold text-black">Alojamiento para Participantes</h2>
+          <p class="text-lg text-black mt-4">Te ofrecemos alojamiento en La Laguna, Tenerife, cerca del evento. Consulta las opciones disponibles:</p>
+        </div>
+
+      
+
+           <!-- Mapa embebido -->
+        <div class="w-full mb-10 rounded-xl overflow-hidden shadow-md" style="height: 66vh; max-height: 900px;">
+          <iframe
+            class="w-full h-full"
+            src="https://www.google.com/maps?q=Plaza+del+Adelantado,+11,+38201+La+Laguna,+Santa+Cruz+de+Tenerife&output=embed"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            style="border:0; border-radius: 16px; width:100%; height:100%; min-height:400px;"
+            title="Ubicación Plaza del Adelantado, La Laguna"
+          ></iframe>
+        </div>
+
+        <!-- Hoteles -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Hotel 1 -->
+          <div class="bg-purple-50 p-4 rounded-xl shadow-inner border border-purple-200">
+            <img src="/nivaria.jpeg" alt="Hotel Laguna Nivaria" class="rounded-lg w-full h-48 object-cover mb-4">
+            <h3 class="text-xl font-semibold text-purple-900">Hotel Laguna Nivaria</h3>
+            <p class="text-black text-sm mb-3">Situado en pleno centro histórico, a 5 min del evento. Confort y estilo colonial.</p>
+            <a href="https://www.lagunanivaria.com" target="_blank" class="text-purple-600 font-medium hover:underline">Visitar sitio web</a>
+          </div>
+
+          <!-- Hotel 2 -->
+          <div class="bg-purple-50 p-4 rounded-xl shadow-inner border border-purple-200">
+            <img src="/nivaria.jpeg" alt="Hotel MC San Agustín" class="rounded-lg w-full h-48 object-cover mb-4">
+            <h3 class="text-xl font-semibold text-purple-900">Hotel MC San Agustín</h3>
+            <p class="text-black text-sm mb-3">Alojamiento boutique con encanto canario, ideal para estancias tranquilas.</p>
+            <a href="https://www.hotelmcsanagustin.com" target="_blank" class="text-purple-600 font-medium hover:underline">Visitar sitio web</a>
+          </div>
+
+          <!-- Hotel 3 -->
+          <div class="bg-purple-50 p-4 rounded-xl shadow-inner border border-purple-200">
+            <img src="/nivaria.jpeg" alt="La Laguna Gran Hotel" class="rounded-lg w-full h-48 object-cover mb-4">
+            <h3 class="text-xl font-semibold text-purple-900">La Laguna Gran Hotel</h3>
+            <p class="text-black text-sm mb-3">Hotel moderno con piscina, ideal para grupos. A 10 minutos caminando del evento.</p>
+            <a href="https://www.lalagunagranhotel.com" target="_blank" class="text-purple-600 font-medium hover:underline">Visitar sitio web</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</DefaultLayout>

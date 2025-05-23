@@ -2,106 +2,34 @@
 import DefaultLayout from '../layouts/DefaultLayout.astro';
 ---
 <DefaultLayout title="Contribuciones">
-  <section class="inscription-section bg-gradient-to-b from-purple-900 to-purple-800 py-16">
+  <section class="inscription-section bg-gradient-to-b from-purple-900 to-purple-800 py-16 mt-11">
     <div class="container mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white shadow-2xl rounded-2xl p-8 border border-purple-200">
 
         <!-- Texto descriptivo -->
-<div>
-  <h2 class="text-4xl font-bold text-black text-center">¿Cómo envío mi proyecto?</h2>
-  <p class="text-lg text-black mt-3 text-center">Para enviar tu proyecto, sigue estos pasos:</p>
-  <div class="bg-white p-6 rounded-lg shadow-inner mt-6">
-    <ol class="list-decimal pl-9 text-black space-y-4 text-lg">
-      <li>Envíanos tu proyecto al correo <b class="text-black">catavs@ull.edu.es</b> o rellena el formulario compartiendo el enlace al documento</li>
-      <li>En el asunto, incluye tu <b class="text-black">nombre completo</b> y <b class="text-black">DNI</b>.</li>
-      <li>Leeremos el proyecto y le comunicaremos si es apto</li>
-    </ol>
-  </div>
-</div>
-  <section class="contribution-section bg-gradient-to-b from-purple-100 to-purple-100 py-16 rounded-2xl">
-    <div class="container mx-auto px-6 ">
-      <div class="bg-white p-8 rounded-2xl shadow-md border border-purple-200">
-        <h2 class="text-2xl font-semibold text-purple-900 ">Envía tu Proyecto</h2>
-        <p class="text-black mb-6">Completa el formulario y comparte tu contribución con nosotros.</p>
-        
-        <form action="https://formsubmit.co/sergiosanpacheco@gmail.com" method="POST" class="space-y-6">
-          <!-- Nombre -->
-          <div>
-            <label for="name" class="block text-black font-medium">Nombre y Apellidos</label>
-            <input type="text" id="name" name="name" required placeholder="Escribe tu nombre completo" class="w-full p-3 border border-purple-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition" />
+        <div>
+          <h2 class="text-4xl font-bold text-black text-center">¿Cómo envío mi proyecto?</h2>
+          <p class="text-lg text-black mt-3 text-center">Para participar, sigue estos pasos:</p>
+          <div class="bg-white p-6 rounded-lg shadow-inner mt-6">
+            <ol class="list-decimal pl-9 text-black space-y-4 text-lg">
+              <li>Accede al formulario de Google Forms a través del botón.</li>
+              <li>Completa todos los campos obligatorios del formulario.</li>
+              <li>Recibirás un correo confirmando la recepción del proyecto. Nos pondremos en contacto si es apto.</li>
+            </ol>
           </div>
-          <!-- Correo Electrónico -->
-            <div>
-              <label for="email" class="block text-black font-medium">Correo Electrónico</label>
-              <input type="email" id="email" name="email" required placeholder="Tu correo electrónico" class="w-full p-3 border border-purple-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition" />
-            </div>
-          <!-- Enlace de Google Drive -->
-          <div>
-            <label for="link" class="block text-black font-medium">Enlace de Google Drive</label>
-            <input type="text" id="link" name="google_drive_link" required placeholder="Pega aquí el enlace de Google Drive" class="w-full p-3 border border-purple-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition" />
-          </div>
+        </div>
 
-          <!-- Comentarios -->
-          <div>
-            <label for="comments" class="block text-black font-medium">Comentarios (máximo 200 palabras)</label>
-            <textarea id="comments" name="comments" rows="4" maxlength="200" required placeholder="Escribe tus comentarios aquí" class="w-full p-3 border border-purple-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition"></textarea>
-          </div>
+        <!-- Botón hacia Google Form -->
+        <div class="flex flex-col items-center">
+          <h3 class="text-2xl font-semibold text-purple-900 mb-4">Formulario de Envío</h3>
+          <p class="text-black mb-6 text-center">Haz clic en el botón para acceder al formulario y enviar tu proyecto.</p>
+          <a href="https://docs.google.com/forms/d/1abcdEFGHijklmnopQRStuvWxYz/viewform" target="_blank" rel="noopener noreferrer"
+             class="bg-purple-100 hover:bg-purple-700 text-black font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition">
+            Ir al Formulario
+          </a>
+        </div>
 
-          <!-- Botón de envío -->
-          <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-all shadow-lg hover:shadow-xl">
-            Enviar Proyecto
-          </button>
-
-          <!-- Campos ocultos -->
-          <input type="hidden" name="_next" value="https://tu-dominio.com/gracias"> <!-- Cambia esto a tu URL de agradecimiento -->
-          <input type="hidden" name="_captcha" value="false"> <!-- Desactiva el captcha -->
-        </form>
       </div>
     </div>
   </section>
-
-  <style>
-    .contribution-section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      margin-top: 50px;
-    }
-
-    .bg-purple-600 {
-      background-color: #6b21a8;
-    }
-
-    .hover\:bg-purple-700:hover {
-      background-color: #5a189a;
-    }
-
-    .rounded-lg {
-      border-radius: 8px;
-    }
-
-    .shadow-lg {
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .hover\:shadow-xl:hover {
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .focus\:ring-2:focus {
-      outline: 2px solid #6b21a8;
-    }
-
-    .focus\:ring-purple-500:focus {
-      outline-color: #6b21a8;
-    }
-
-    .focus\:border-purple-500:focus {
-      border-color: #6b21a8;
-    }
-  </style>
 </DefaultLayout>
