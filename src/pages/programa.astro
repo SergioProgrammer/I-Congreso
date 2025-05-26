@@ -1,4 +1,5 @@
 ---
+// filepath: /Users/sergiosandovalpacheco/Desktop/I Congreso/src/pages/programa.astro
 import DefaultLayout from '../layouts/DefaultLayout.astro';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -10,124 +11,215 @@ import 'swiper/css/pagination';
     <div class="container">
       <h1 class="text-6xl text-center mb-16">PROGRAMA</h1>
 
-      <!-- Botones de navegación arriba -->
-      <div class="relative mb-4 flex justify-center">
-        <div class="swiper-button-prev absolute left-10 top-1/2 transform -translate-y-1/2"></div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next absolute right-10 top-1/2 transform -translate-y-1/2"></div>
+      <!-- Desktop/Tablet: Swiper -->
+      <div class="hidden md:block">
+        <!-- Botones de navegación arriba -->
+        <div class="relative mb-4 flex justify-center">
+          <div class="swiper-button-prev absolute left-10 top-1/2 transform -translate-y-1/2"></div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next absolute right-10 top-1/2 transform -translate-y-1/2"></div>
+        </div>
+        <div class="swiper overflow-x-auto md:overflow-visible" style="scroll-snap-type: x mandatory;">
+          <div class="swiper-wrapper min-w-[350px] md:min-w-0">
+            <!-- Jueves 9 de octubre -->
+            <div class="swiper-slide">
+              <div class="program-day">
+                <h2 class="text-4xl mb-4">Jueves 9 de octubre</h2>
+                <ul class="program-list">
+                  <li><strong>8:00 a 9:00</strong> Apertura de puertas y Recogida de documentación</li>
+                  <li><strong>9:00 a 9:30</strong> Sesión Inaugural del Congreso</li>
+                </ul>
+                <p class="font-bold mt-6 mb-2">Moderadores: María del Carmen Rodríguez Jiménez e Irene Puerta Araña</p>
+                <ul class="program-list">
+                  <li><strong>9:30 a 10:15</strong> Ángel M. Ramos Macías — Criterios de selección de un implante coclear</li>
+                  <li><strong>10:15 a 11:00</strong> Juan Carlos Falcón González — Hipoacusia: Impacto en el desarrollo del lenguaje y la cognición</li>
+                  <li><strong>11:00 a 11:45</strong> José Juan Barajas de Prat — Estudio Longitudinal de los cambios en la sensibilidad auditiva en relación a la edad.</li>
+                  <li><strong>11:45 a 12:15</strong> COFFE BREAK</li>
+                  <li><strong>12:20 a 13:00</strong> Franz Zenker Castro — Hipoacusia Neurosensorial y percepción del habla. Consideraciones en población pediátrica</li>
+                  <li><strong>13:00 a 13:45</strong> Laura Flix Díez — El papel de la fisioterapia en el equilibrio: visión, audición y sistema vestibular</li>
+                  <li><strong>14:00 a 15:30</strong> PAUSA - COMIDA</li>
+                </ul>
+                <p class="font-bold mt-6 mb-2">Moderadores: María del Carmen Rodríguez Jiménez y Rayco H. González Montesino</p>
+                <ul class="program-list">
+                  <li><strong>15:30 a 16:05</strong> Iván Vázquez Villar — Retratos de la vida de las personas sordas mayores en el ámbito educativo.</li>
+                  <li><strong>16:05 a 16:40</strong> Carla Méndez Trillo — Lenguaje, poder e invisibilización: el impacto de las discriminaciones audistas en la comunidad sorda.</li>
+                  <li><strong>16:40 a 17:15</strong> María C. Bao Fente — Sordera, logopedia y bilingüismo: de la evidencia lingüística a la práctica clínica</li>
+                  <li><strong>17:15 a 17:45</strong> COFFE BREAK</li>
+                  <li><strong>17:45 a 18:20</strong> Rayco H. González Montesino — La interpretación de lenguas de signos en los servicios públicos: certezas (y reflexiones) sobre accesibilidad y derechos lingüísticos.</li>
+                  <li><strong>18:20 a 18:55</strong> Susana Bena Villaseñor — La educación del alumno sordo: perspectiva histórica y situación pedagógica actual</li>
+                  <li><strong>18:55 a 19:30</strong> Stéphanie Marie Michèle Papin — Las lenguas de signos como lenguas de herencia: el caso de los/as CODA (hijos de padres sordos)</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Viernes 10 de octubre -->
+            <div class="swiper-slide">
+              <div class="program-day">
+                <h2 class="text-4xl mb-4">Viernes 10 de octubre</h2>
+                <p class="font-bold mt-2 mb-2">Moderadores: Alexandra Tisaire de Dios y Helena Arroyo Moratilla</p>
+                <ul class="program-list">
+                  <li><strong>9:00 a 9:45</strong> José Mª Millán Salvador — Síndrome de Usher: Rompiendo el Silencio, Iluminando el Futuro</li>
+                  <li><strong>9:45 a 10:30</strong> Helena Arroyo Moratilla — Intervención logopédica en el implante coclear con patologías asociadas</li>
+                  <li><strong>10:30 a 11:15</strong> María Cambre Barceló — La realidad de las personas sordociegas en España: visibilidad y desafíos actuales</li>
+                  <li><strong>11:15 a 11:45</strong> COFFE BREAK</li>
+                  <li><strong>11:45 a 12:30</strong> Jane Catherine Mackay Gallacher — Rehabilitación de niños con implantes cocleares bilaterales: La experiencia escocesa. Rehabilitation of children with bilateral cochlear implants: The Scottish Experience</li>
+                  <li><strong>12:30 a 13:15</strong> Nicola June Clarke — Rehabilitation of Adults with Cochlear Implants: Assessment and Beyond</li>
+                  <li><strong>13:15 a 14:00</strong> Helen Cullington — How technology is changing CI care</li>
+                  <li><strong>14:00 a 15:30</strong> PAUSA - COMIDA</li>
+                </ul>
+                <p class="font-bold mt-6 mb-2">Moderadores: José Fierro Marrero y Laura Flix Díez</p>
+                <ul class="program-list">
+                  <li><strong>15:30 a 16:10</strong> Romina Piccione — La individualización del tratamiento con MED-EL: de la tecnología a la rehabilitación del implante coclear centrada en la intervención familiar</li>
+                  <li><strong>16:10 a 16:50</strong> Mariana Maggio De Maggi — Sistemas de micrófono remoto: ¿por qué, cómo, cuándo y dónde?</li>
+                  <li><strong>16:50 a 17:30</strong> Natalia Beraza Tamayo — Familias y derechos: el rol del Movimiento de Familias FIAPAS en la lucha por la igualdad.</li>
+                  <li><strong>17:30 a 18:00</strong> COFFE BREAK</li>
+                  <li><strong>18:00 a 18:40</strong> Alexandra Tisaire de Dios — Rehabilitación auditiva post-implante coclear en población adulta.</li>
+                  <li><strong>18:40 a 19:15</strong> Marina Salorio-Corbeto — Herramientas de realidad virtual para la evaluación y rehabilitación de la escucha espacial en niños con implantes cocleares bilaterales</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Sábado 11 de octubre -->
+            <div class="swiper-slide">
+              <div class="program-day">
+                <h2 class="text-4xl mb-4">Sábado 11 de octubre</h2>
+                <p class="font-bold mt-2 mb-2">Moderadores: María Eulalia Díaz García y Raquel González Hernández</p>
+                <ul class="program-list">
+                  <li><strong>9:00 a 9:45</strong> Teresita Herrera Marín — Early Education: Teacher of the Deaf working in partnership with families. Educación temprana: Maestra de audición y lenguaje trabajando en colaboración con familias.</li>
+                  <li><strong>9:45 a 10:30</strong> Naira Delgado Márquez — Cada niño, un camino: claves de la Terapia Auditivo-Verbal ™ en la diversidad infantil.</li>
+                  <li><strong>10:30 a 11:00</strong> COFFE BREAK</li>
+                  <li><strong>11:00 a 12:00</strong> Helena Arroyo Moratilla y Alexandra Tisaire de Dios — Programación del implante coclear en población infantil y adulta</li>
+                  <li><strong>12:00 a 12:45</strong> Betty Sackett, LSLS Cert. AVT. — Apoyando el desarrollo de la Teoría de la Mente en niños con hipoacusia: Estrategias prácticas para padres.</li>
+                  <li><strong>13:00</strong> CLAUSURA DEL CONGRESO</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Talleres -->
+            <div class="swiper-slide">
+              <div class="program-day">
+                <h2 class="text-4xl mb-4">Talleres</h2>
+                <h3 class="text-2xl mb-2 mt-4">Jueves 9 de octubre</h3>
+                <ul class="program-list">
+                  <li><strong>15:00 a 19:00</strong> <span class="italic text-purple-700">*30 plazas disponibles por taller*</span><br/>José Fierro Marrero y Laura Flix Díez — El Papel de la Fisioterapia en la Recuperación Funcional de Personas con Discapacidad Auditiva: Abordaje del vértigo, mareo y equilibrio</li>
+                  <li><strong>19:00 a 20:00</strong> <span class="italic text-purple-700">*Gratuito. Plazas hasta completar aforo de la sala*</span><br/>Alejandro Heneyands Martí — STIWELL PROFES: Electroestimulación como herramienta terapéutica y de evaluación en pacientes con Parálisis Facial</li>
+                </ul>
+                <h3 class="text-2xl mb-2 mt-8">Viernes 10 de octubre</h3>
+                <ul class="program-list">
+                  <li><strong>15:00 a 19:00</strong> <span class="italic text-purple-700">*30 plazas disponibles por taller*</span><br/>María Eulalia Díaz García — Taller práctico de la mejora de la calidad vocal</li>
+                  <li><strong>18:00 a 18:40</strong> <span class="italic text-purple-700">*Gratuito. Plazas hasta completar aforo de la sala*</span><br/>Teresita Herrera Marín — Educación del alumnado sordo-Modelo Educativo en Inglaterra</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <p class="block md:hidden text-xs text-purple-700 text-center mt-4">Desliza hacia la derecha para ver el programa completo</p>
+        </div>
       </div>
 
-      <div class="swiper overflow-x-auto md:overflow-visible" style="scroll-snap-type: x mandatory;">
-        <div class="swiper-wrapper min-w-[350px] md:min-w-0">
-          <!-- Jueves 9 de octubre -->
-          <div class="swiper-slide">
-            <div class="program-day">
-              <h2 class="text-4xl mb-4">Jueves 9 de octubre</h2>
-              <ul class="program-list">
-                <li><strong>8:00 a 9:00</strong> Apertura de puertas y Recogida de documentación</li>
-                <li><strong>9:00 a 9:30</strong> Sesión Inaugural del Congreso</li>
-              </ul>
-              <p class="font-bold mt-6 mb-2">Moderadores: María del Carmen Rodríguez Jiménez e Irene Puerta Araña</p>
-              <ul class="program-list">
-                <li><strong>9:30 a 10:15</strong> Ángel M. Ramos Macías — Criterios de selección de un implante coclear</li>
-                <li><strong>10:15 a 11:00</strong> Juan Carlos Falcón González — Hipoacusia: Impacto en el desarrollo del lenguaje y la cognición</li>
-                <li><strong>11:00 a 11:45</strong> José Juan Barajas de Prat — Estudio Longitudinal de los cambios en la sensibilidad auditiva en relación a la edad.</li>
-                <li><strong>11:45 a 12:15</strong> COFFE BREAK</li>
-                <li><strong>12:20 a 13:00</strong> Franz Zenker Castro — Hipoacusia Neurosensorial y percepción del habla. Consideraciones en población pediátrica</li>
-                <li><strong>13:00 a 13:45</strong> Laura Flix Díez — El papel de la fisioterapia en el equilibrio: visión, audición y sistema vestibular</li>
-                <li><strong>14:00 a 15:30</strong> PAUSA - COMIDA</li>
-              </ul>
-              <p class="font-bold mt-6 mb-2">Moderadores: María del Carmen Rodríguez Jiménez y Rayco H. González Montesino</p>
-              <ul class="program-list">
-                <li><strong>15:30 a 16:05</strong> Iván Vázquez Villar — Retratos de la vida de las personas sordas mayores en el ámbito educativo.</li>
-                <li><strong>16:05 a 16:40</strong> Carla Méndez Trillo — Lenguaje, poder e invisibilización: el impacto de las discriminaciones audistas en la comunidad sorda.</li>
-                <li><strong>16:40 a 17:15</strong> María C. Bao Fente — Sordera, logopedia y bilingüismo: de la evidencia lingüística a la práctica clínica</li>
-                <li><strong>17:15 a 17:45</strong> COFFE BREAK</li>
-                <li><strong>17:45 a 18:20</strong> Rayco H. González Montesino — La interpretación de lenguas de signos en los servicios públicos: certezas (y reflexiones) sobre accesibilidad y derechos lingüísticos.</li>
-                <li><strong>18:20 a 18:55</strong> Susana Bena Villaseñor — La educación del alumno sordo: perspectiva histórica y situación pedagógica actual</li>
-                <li><strong>18:55 a 19:30</strong> Stéphanie Marie Michèle Papin — Las lenguas de signos como lenguas de herencia: el caso de los/as CODA (hijos de padres sordos)</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Viernes 10 de octubre -->
-          <div class="swiper-slide">
-            <div class="program-day">
-              <h2 class="text-4xl mb-4">Viernes 10 de octubre</h2>
-              <p class="font-bold mt-2 mb-2">Moderadores: Alexandra Tisaire de Dios y Helena Arroyo Moratilla</p>
-              <ul class="program-list">
-                <li><strong>9:00 a 9:45</strong> José Mª Millán Salvador — Síndrome de Usher: Rompiendo el Silencio, Iluminando el Futuro</li>
-                <li><strong>9:45 a 10:30</strong> Helena Arroyo Moratilla — Intervención logopédica en el implante coclear con patologías asociadas</li>
-                <li><strong>10:30 a 11:15</strong> María Cambre Barceló — La realidad de las personas sordociegas en España: visibilidad y desafíos actuales</li>
-                <li><strong>11:15 a 11:45</strong> COFFE BREAK</li>
-                <li><strong>11:45 a 12:30</strong> Jane Catherine Mackay Gallacher — Rehabilitación de niños con implantes cocleares bilaterales: La experiencia escocesa. Rehabilitation of children with bilateral cochlear implants: The Scottish Experience</li>
-                <li><strong>12:30 a 13:15</strong> Nicola June Clarke — Rehabilitation of Adults with Cochlear Implants: Assessment and Beyond</li>
-                <li><strong>13:15 a 14:00</strong> Helen Cullington — How technology is changing CI care</li>
-                <li><strong>14:00 a 15:30</strong> PAUSA - COMIDA</li>
-              </ul>
-              <p class="font-bold mt-6 mb-2">Moderadores: José Fierro Marrero y Laura Flix Díez</p>
-              <ul class="program-list">
-                <li><strong>15:30 a 16:10</strong> Romina Piccione — La individualización del tratamiento con MED-EL: de la tecnología a la rehabilitación del implante coclear centrada en la intervención familiar</li>
-                <li><strong>16:10 a 16:50</strong> Mariana Maggio De Maggi — Sistemas de micrófono remoto: ¿por qué, cómo, cuándo y dónde?</li>
-                <li><strong>16:50 a 17:30</strong> Natalia Beraza Tamayo — Familias y derechos: el rol del Movimiento de Familias FIAPAS en la lucha por la igualdad.</li>
-                <li><strong>17:30 a 18:00</strong> COFFE BREAK</li>
-                <li><strong>18:00 a 18:40</strong> Alexandra Tisaire de Dios — Rehabilitación auditiva post-implante coclear en población adulta.</li>
-                <li><strong>18:40 a 19:15</strong> Marina Salorio-Corbeto — Herramientas de realidad virtual para la evaluación y rehabilitación de la escucha espacial en niños con implantes cocleares bilaterales</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Sábado 11 de octubre -->
-          <div class="swiper-slide">
-            <div class="program-day">
-              <h2 class="text-4xl mb-4">Sábado 11 de octubre</h2>
-              <p class="font-bold mt-2 mb-2">Moderadores: María Eulalia Díaz García y Raquel González Hernández</p>
-              <ul class="program-list">
-                <li><strong>9:00 a 9:45</strong> Teresita Herrera Marín — Early Education: Teacher of the Deaf working in partnership with families. Educación temprana: Maestra de audición y lenguaje trabajando en colaboración con familias.</li>
-                <li><strong>9:45 a 10:30</strong> Naira Delgado Márquez — Cada niño, un camino: claves de la Terapia Auditivo-Verbal ™ en la diversidad infantil.</li>
-                <li><strong>10:30 a 11:00</strong> COFFE BREAK</li>
-                <li><strong>11:00 a 12:00</strong> Helena Arroyo Moratilla y Alexandra Tisaire de Dios — Programación del implante coclear en población infantil y adulta</li>
-                <li><strong>12:00 a 12:45</strong> Betty Sackett, LSLS Cert. AVT. — Apoyando el desarrollo de la Teoría de la Mente en niños con hipoacusia: Estrategias prácticas para padres.</li>
-                <li><strong>13:00</strong> CLAUSURA DEL CONGRESO</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Talleres -->
-          <div class="swiper-slide">
-            <div class="program-day">
-              <h2 class="text-4xl mb-4">Talleres</h2>
-              <h3 class="text-2xl mb-2 mt-4">Jueves 9 de octubre</h3>
-              <ul class="program-list">
-                <li><strong>15:00 a 19:00</strong> <span class="italic text-purple-700">*30 plazas disponibles por taller*</span><br/>José Fierro Marrero y Laura Flix Díez — El Papel de la Fisioterapia en la Recuperación Funcional de Personas con Discapacidad Auditiva: Abordaje del vértigo, mareo y equilibrio</li>
-                <li><strong>19:00 a 20:00</strong> <span class="italic text-purple-700">*Gratuito. Plazas hasta completar aforo de la sala*</span><br/>Alejandro Heneyands Martí — STIWELL PROFES: Electroestimulación como herramienta terapéutica y de evaluación en pacientes con Parálisis Facial</li>
-              </ul>
-              <h3 class="text-2xl mb-2 mt-8">Viernes 10 de octubre</h3>
-              <ul class="program-list">
-                <li><strong>15:00 a 19:00</strong> <span class="italic text-purple-700">*30 plazas disponibles por taller*</span><br/>María Eulalia Díaz García — Taller práctico de la mejora de la calidad vocal</li>
-                <li><strong>18:00 a 18:40</strong> <span class="italic text-purple-700">*Gratuito. Plazas hasta completar aforo de la sala*</span><br/>Teresita Herrera Marín — Educación del alumnado sordo-Modelo Educativo en Inglaterra</li>
-              </ul>
-            </div>
-          </div>
+      <!-- Mobile: Programa simple en vertical -->
+      <div class="block md:hidden">
+        <!-- Jueves 9 de octubre -->
+        <div class="program-day-mobile">
+          <h2 class="text-3xl mb-4">Jueves 9 de octubre</h2>
+          <ul class="program-list-mobile">
+            <li><strong>8:00 a 9:00</strong> Apertura de puertas y Recogida de documentación</li>
+            <li><strong>9:00 a 9:30</strong> Sesión Inaugural del Congreso</li>
+          </ul>
+          <p class="font-bold mt-6 mb-2">Moderadores: María del Carmen Rodríguez Jiménez e Irene Puerta Araña</p>
+          <ul class="program-list-mobile">
+            <li><strong>9:30 a 10:15</strong> Ángel M. Ramos Macías — Criterios de selección de un implante coclear</li>
+            <li><strong>10:15 a 11:00</strong> Juan Carlos Falcón González — Hipoacusia: Impacto en el desarrollo del lenguaje y la cognición</li>
+            <li><strong>11:00 a 11:45</strong> José Juan Barajas de Prat — Estudio Longitudinal de los cambios en la sensibilidad auditiva en relación a la edad.</li>
+            <li><strong>11:45 a 12:15</strong> COFFE BREAK</li>
+            <li><strong>12:20 a 13:00</strong> Franz Zenker Castro — Hipoacusia Neurosensorial y percepción del habla. Consideraciones en población pediátrica</li>
+            <li><strong>13:00 a 13:45</strong> Laura Flix Díez — El papel de la fisioterapia en el equilibrio: visión, audición y sistema vestibular</li>
+            <li><strong>14:00 a 15:30</strong> PAUSA - COMIDA</li>
+          </ul>
+          <p class="font-bold mt-6 mb-2">Moderadores: María del Carmen Rodríguez Jiménez y Rayco H. González Montesino</p>
+          <ul class="program-list-mobile">
+            <li><strong>15:30 a 16:05</strong> Iván Vázquez Villar — Retratos de la vida de las personas sordas mayores en el ámbito educativo.</li>
+            <li><strong>16:05 a 16:40</strong> Carla Méndez Trillo — Lenguaje, poder e invisibilización: el impacto de las discriminaciones audistas en la comunidad sorda.</li>
+            <li><strong>16:40 a 17:15</strong> María C. Bao Fente — Sordera, logopedia y bilingüismo: de la evidencia lingüística a la práctica clínica</li>
+            <li><strong>17:15 a 17:45</strong> COFFE BREAK</li>
+            <li><strong>17:45 a 18:20</strong> Rayco H. González Montesino — La interpretación de lenguas de signos en los servicios públicos: certezas (y reflexiones) sobre accesibilidad y derechos lingüísticos.</li>
+            <li><strong>18:20 a 18:55</strong> Susana Bena Villaseñor — La educación del alumno sordo: perspectiva histórica y situación pedagógica actual</li>
+            <li><strong>18:55 a 19:30</strong> Stéphanie Marie Michèle Papin — Las lenguas de signos como lenguas de herencia: el caso de los/as CODA (hijos de padres sordos)</li>
+          </ul>
         </div>
-        <p class="block md:hidden text-xs text-purple-700 text-center mt-4">Desliza hacia la derecha para ver el programa completo</p>
+
+        <!-- Viernes 10 de octubre -->
+        <div class="program-day-mobile">
+          <h2 class="text-3xl mb-4">Viernes 10 de octubre</h2>
+          <p class="font-bold mt-2 mb-2">Moderadores: Alexandra Tisaire de Dios y Helena Arroyo Moratilla</p>
+          <ul class="program-list-mobile">
+            <li><strong>9:00 a 9:45</strong> José Mª Millán Salvador — Síndrome de Usher: Rompiendo el Silencio, Iluminando el Futuro</li>
+            <li><strong>9:45 a 10:30</strong> Helena Arroyo Moratilla — Intervención logopédica en el implante coclear con patologías asociadas</li>
+            <li><strong>10:30 a 11:15</strong> María Cambre Barceló — La realidad de las personas sordociegas en España: visibilidad y desafíos actuales</li>
+            <li><strong>11:15 a 11:45</strong> COFFE BREAK</li>
+            <li><strong>11:45 a 12:30</strong> Jane Catherine Mackay Gallacher — Rehabilitación de niños con implantes cocleares bilaterales: La experiencia escocesa. Rehabilitation of children with bilateral cochlear implants: The Scottish Experience</li>
+            <li><strong>12:30 a 13:15</strong> Nicola June Clarke — Rehabilitation of Adults with Cochlear Implants: Assessment and Beyond</li>
+            <li><strong>13:15 a 14:00</strong> Helen Cullington — How technology is changing CI care</li>
+            <li><strong>14:00 a 15:30</strong> PAUSA - COMIDA</li>
+          </ul>
+          <p class="font-bold mt-6 mb-2">Moderadores: José Fierro Marrero y Laura Flix Díez</p>
+          <ul class="program-list-mobile">
+            <li><strong>15:30 a 16:10</strong> Romina Piccione — La individualización del tratamiento con MED-EL: de la tecnología a la rehabilitación del implante coclear centrada en la intervención familiar</li>
+            <li><strong>16:10 a 16:50</strong> Mariana Maggio De Maggi — Sistemas de micrófono remoto: ¿por qué, cómo, cuándo y dónde?</li>
+            <li><strong>16:50 a 17:30</strong> Natalia Beraza Tamayo — Familias y derechos: el rol del Movimiento de Familias FIAPAS en la lucha por la igualdad.</li>
+            <li><strong>17:30 a 18:00</strong> COFFE BREAK</li>
+            <li><strong>18:00 a 18:40</strong> Alexandra Tisaire de Dios — Rehabilitación auditiva post-implante coclear en población adulta.</li>
+            <li><strong>18:40 a 19:15</strong> Marina Salorio-Corbeto — Herramientas de realidad virtual para la evaluación y rehabilitación de la escucha espacial en niños con implantes cocleares bilaterales</li>
+          </ul>
+        </div>
+
+        <!-- Sábado 11 de octubre -->
+        <div class="program-day-mobile">
+          <h2 class="text-3xl mb-4">Sábado 11 de octubre</h2>
+          <p class="font-bold mt-2 mb-2">Moderadores: María Eulalia Díaz García y Raquel González Hernández</p>
+          <ul class="program-list-mobile">
+            <li><strong>9:00 a 9:45</strong> Teresita Herrera Marín — Early Education: Teacher of the Deaf working in partnership with families. Educación temprana: Maestra de audición y lenguaje trabajando en colaboración con familias.</li>
+            <li><strong>9:45 a 10:30</strong> Naira Delgado Márquez — Cada niño, un camino: claves de la Terapia Auditivo-Verbal ™ en la diversidad infantil.</li>
+            <li><strong>10:30 a 11:00</strong> COFFE BREAK</li>
+            <li><strong>11:00 a 12:00</strong> Helena Arroyo Moratilla y Alexandra Tisaire de Dios — Programación del implante coclear en población infantil y adulta</li>
+            <li><strong>12:00 a 12:45</strong> Betty Sackett, LSLS Cert. AVT. — Apoyando el desarrollo de la Teoría de la Mente en niños con hipoacusia: Estrategias prácticas para padres.</li>
+            <li><strong>13:00</strong> CLAUSURA DEL CONGRESO</li>
+          </ul>
+        </div>
+
+        <!-- Talleres -->
+        <div class="program-day-mobile">
+          <h2 class="text-3xl mb-4">Talleres</h2>
+          <h3 class="text-2xl mb-2 mt-4">Jueves 9 de octubre</h3>
+          <ul class="program-list-mobile">
+            <li><strong>15:00 a 19:00</strong> <span class="italic text-purple-700">*30 plazas disponibles por taller*</span><br/>José Fierro Marrero y Laura Flix Díez — El Papel de la Fisioterapia en la Recuperación Funcional de Personas con Discapacidad Auditiva: Abordaje del vértigo, mareo y equilibrio</li>
+            <li><strong>19:00 a 20:00</strong> <span class="italic text-purple-700">*Gratuito. Plazas hasta completar aforo de la sala*</span><br/>Alejandro Heneyands Martí — STIWELL PROFES: Electroestimulación como herramienta terapéutica y de evaluación en pacientes con Parálisis Facial</li>
+          </ul>
+          <h3 class="text-2xl mb-2 mt-8">Viernes 10 de octubre</h3>
+          <ul class="program-list-mobile">
+            <li><strong>15:00 a 19:00</strong> <span class="italic text-purple-700">*30 plazas disponibles por taller*</span><br/>María Eulalia Díaz García — Taller práctico de la mejora de la calidad vocal</li>
+            <li><strong>18:00 a 18:40</strong> <span class="italic text-purple-700">*Gratuito. Plazas hasta completar aforo de la sala*</span><br/>Teresita Herrera Marín — Educación del alumnado sordo-Modelo Educativo en Inglaterra</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 </DefaultLayout>
+
 <script>
   import Swiper from 'swiper';
   import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
-  new Swiper('.swiper', {
-    modules: [Navigation, Pagination, Autoplay],
-    spaceBetween: 50,
-    slidesPerView: 1,
-    autoplay: { delay: 90000 },
-    loop: true,
-    pagination: { el: '.swiper-pagination', clickable: true },
-    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-  });
+  if (window.innerWidth >= 768) {
+    new Swiper('.swiper', {
+      modules: [Navigation, Pagination, Autoplay],
+      spaceBetween: 50,
+      slidesPerView: 1,
+      autoplay: { delay: 90000 },
+      loop: true,
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    });
+  }
 </script>
 
 <style lang="scss">
@@ -137,56 +229,8 @@ import 'swiper/css/pagination';
     border-radius: 15px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     margin-bottom: 2rem;
-    min-width: 350px; /* Para scroll horizontal en mobile */
+    min-width: 350px;
     scroll-snap-align: start;
-  }
-
-  @media (max-width: 768px) {
-    .swiper {
-      overflow-x: auto !important;
-      display: flex;
-      flex-wrap: nowrap;
-      scroll-snap-type: x mandatory;
-    }
-    .swiper-wrapper {
-      display: flex;
-      flex-wrap: nowrap;
-      min-width: 350px;
-    }
-    .swiper-slide {
-      min-width: 95vw;
-      max-width: 95vw;
-      scroll-snap-align: start;
-      flex-shrink: 0;
-      display: flex;
-      justify-content: center;
-      /* Para que el contenido no se corte y permita scroll vertical */
-      height: 80vh;
-      overflow-y: auto;
-    }
-    .program-day {
-      min-width: 0;
-      max-width: 100%;
-      width: 100%;
-      padding: 20px;
-      overflow-y: auto;
-    }
-  }
-
-  h1 {
-    font-size: 4rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #333;
-  }
-
-  h2 {
-    font-size: 2.8rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-    color: #444;
-    text-align: center;
   }
 
   .program-list {
@@ -225,5 +269,41 @@ import 'swiper/css/pagination';
   .swiper-pagination {
     position: relative;
     margin-top: 10px;
+  }
+
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    .program-day {
+      display: none;
+    }
+    .program-day-mobile {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.10);
+      margin-bottom: 2rem;
+      padding: 20px 10px;
+    }
+    .program-list-mobile {
+      list-style-type: none;
+      padding: 0;
+    }
+    .program-list-mobile li {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+      background: #f8f6fc;
+      padding: 12px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(118, 4, 183, 0.05);
+      display: block;
+    }
+    .program-list-mobile li strong {
+      color: #7604b7;
+      font-weight: bold;
+      margin-right: 8px;
+      font-size: 1.1rem;
+      min-width: 110px;
+      display: inline-block;
+    }
   }
 </style>
