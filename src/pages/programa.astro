@@ -154,15 +154,22 @@ import 'swiper/css/pagination';
       min-width: 350px;
     }
     .swiper-slide {
-      min-width: 350px;
+      min-width: 95vw;
       max-width: 95vw;
       scroll-snap-align: start;
       flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      /* Para que el contenido no se corte y permita scroll vertical */
+      height: 80vh;
+      overflow-y: auto;
     }
     .program-day {
-      min-width: 320px;
-      max-width: 95vw;
+      min-width: 0;
+      max-width: 100%;
+      width: 100%;
       padding: 20px;
+      overflow-y: auto;
     }
   }
 
