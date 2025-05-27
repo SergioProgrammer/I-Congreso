@@ -6,7 +6,7 @@ import DefaultLayout from '../layouts/DefaultLayout.astro';
     <div class="container mx-auto px-6">
       <div class="bg-white shadow-2xl rounded-2xl p-8 border border-purple-200">
 
-        <h2 class="text-4xl font-bold text-black text-center mb-6">Contribuciones</h2>
+        <h2 class="text-4xl font-bold text-purple-900 text-center mb-6">Contribuciones</h2>
         <p class="text-lg text-black mb-6 text-center">
           Se podrán presentar comunicaciones en modalidad online, en español e inglés, que se alineen con las temáticas del congreso y que aborden resultados de investigaciones, experiencias, propuestas didácticas o reflexiones pedagógicas. Estas comunicaciones serán evaluadas por el Comité Científico, quien determinará su aceptación. Los autores de las propuestas aprobadas recibirán los certificados correspondientes, y todas las comunicaciones aceptadas serán publicadas en acceso abierto como capítulos de libro en la Editorial Dykinson (Q1 SPI, Norwegian List nivel 1). El título del libro será: <b>"Sordera, Discapacidad Auditiva y Sordoceguera en el Siglo XXI: Desafíos, Innovaciones y Caminos por Recorrer"</b>.
         </p>
@@ -87,17 +87,28 @@ import DefaultLayout from '../layouts/DefaultLayout.astro';
         </div>
 
         <!-- Botón hacia Google Form -->
-        <div class="flex flex-col items-center mt-8">
+      
+      <section class="bg-purple-50 p-6 rounded-lg shadow-md">
+        <div class="flex flex-col items-center mt-12">
           <h3 class="text-4xl font-semibold text-purple-900 mb-4">Formulario de Envío</h3>
-          <p class="text-black mb-6 text-center">Haz clic en el botón para acceder al formulario y enviar tu resumen.</p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdwCDYqkulxzd0WG_5ZVZSXlb17W91lgL1vQIpE7tjtunEIPA/viewform?usp=sharing&ouid=104232590309245442143
-            " target="_blank" rel="noopener noreferrer"
-             class="bg-purple-100 hover:bg-purple-700 text-black font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition">
+          <p class="text-black mb-6 text-center text-2xl">Haz clic en el botón para acceder al formulario y enviar tu resumen.</p>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdwCDYqkulxzd0WG_5ZVZSXlb17W91lgL1vQIpE7tjtunEIPA/viewform?usp=sharing&ouid=104232590309245442143"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-xl formulario-btn bg-purple-100 border-2 border-purple-700 text-purple-900 hover:bg-purple-200 hover:text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-2xl transition"
+          >
             Ir al Formulario
           </a>
         </div>
-
+    </section>
       </div>
     </div>
   </section>
 </DefaultLayout>
+
+<style>
+  .formulario-btn {
+    transition: background 0.2s, color 0.2s;
+  }
+</style>
