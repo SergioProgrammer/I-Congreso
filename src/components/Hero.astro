@@ -23,10 +23,11 @@ const { src = '/hero.PNG' } = Astro.props
         </div>
       </div>
       <div class="flex flex-col items-center mb-1">
-        <img class="hidden lg:block" src={src} alt="" decoding="async" />
+        <img class="hero-img" src={src} alt="" decoding="async" />
+        <img class="mt-4 image11-img" src="/img/image11.png" alt="Financia" decoding="async" />
         <div class="text-center text-black mt-6 ml-5">
-          <h2 class="text-3xl">Cuenta atrás para el Congreso</h2>
-          <div id="countdown" class="text-2xl mt-1 mb-6"></div>
+          <h2 class="text-2xl">Cuenta atrás para el Congreso</h2>
+          <div id="countdown" class="text-xl mt-1 mb-6"></div>
         </div>
       </div>
     </div>
@@ -34,6 +35,39 @@ const { src = '/hero.PNG' } = Astro.props
 </section>
 
 <style lang="scss">
+  .hero-img {
+    width: 260px;
+    max-width: 90vw;
+    height: auto;
+    display: block;
+  }
+  .image11-img {
+    width: 180px;
+    max-width: 60vw;
+    height: auto;
+    display: block;
+    margin-top: 16px;
+  }
+  @media (min-width: 768px) {
+    .hero-img {
+      width: 320px;
+      max-width: 320px;
+    }
+    .image11-img {
+      width: 220px;
+      max-width: 220px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .hero-img {
+      width: 380px;
+      max-width: 380px;
+    }
+    .image11-img {
+      width: 260px;
+      max-width: 260px;
+    }
+  }
   .text-gradient {
     background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-500));
     background-clip: border-box;

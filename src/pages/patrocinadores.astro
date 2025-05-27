@@ -1,5 +1,29 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro';
+
+// Cambia estos nombres por los de cada entidad colaboradora, en el mismo orden que las imágenes (excepto la 11)
+const colaboradores = [
+  "CNSE",
+  "Cabildo de Tenerife",
+  "Universidad de La Laguna",
+  "Centro de normalización lingusituca de la lengua de signos española",
+  "Servicio Canario de Salud",
+  "Fundación CNSE",
+  "Universidad de Valladolid",
+  "Funcacion CD tenerife",
+  "Facultad de psicología y logopedia de la ULL",
+  "UNED",
+  "Universidad Rey Juan Carlos",
+  "Universidad Internacional de Valencia",
+  "Universidad de Extremadura",
+  "Clínica Barajas",
+  "Once",
+  "Fundacion Doctor Barajas",
+  "Universidad Complutense de Madrid",
+  "Grupo de Investigacion Educar en la Diversidad",
+  "Afón",
+  "Fundación Once para la atención de personas con sordoceguera",
+];
 ---
 
 <DefaultLayout title="Patrocinadores">
@@ -11,14 +35,14 @@ import DefaultLayout from '../layouts/DefaultLayout.astro';
         <div class="text-center w-full md:w-1/2">
           <h2 class="text-4xl font-semibold mb-4">Organiza</h2>
           <div class="sponsor-card mx-auto max-w-[500px]">
-            <img src="/img/image22.svg" alt="Organiza" class="sponsor-logo-large"/>
+            <img src="/img/image22.svg" alt="Cátedra de investigación e innovación en discapacidad auditiva y accesibilidad" class="sponsor-logo-large"/>
           </div>
         </div>
         <!-- Financia -->
         <div class="text-center w-full md:w-1/2">
           <h2 class="text-4xl font-semibold mb-4">Financia</h2>
           <div class="sponsor-card mx-auto max-w-[500px]">
-            <img src="/img/image11.png" alt="Financia" class="sponsor-logo-large"/>
+            <img src="/img/image11.png" alt="consejería insular de acción social,inclusión, voluntariado y participación ciudadana" class="sponsor-logo-large"/>
           </div>
         </div>
       </div>
@@ -29,27 +53,31 @@ import DefaultLayout from '../layouts/DefaultLayout.astro';
       </div>
       <div class="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {Array.from({ length: 21 }, (_, i) => {
-          if (i + 1 === 11) return null; // omite image11 (utilizada en Financia)
+          if (i + 1 === 11) return null; 
           return (
             <div class="sponsor-card">
-              <img src={`/img/image${i + 1}.png`} alt={`Patrocinador ${i + 1}`} class="sponsor-logo1" />
+              <img
+                src={`/img/image${i + 1}.png`}
+                alt={colaboradores[i] || `Colaborador ${i + 1}`}
+                class="sponsor-logo1"
+              />
             </div>
           );
         })}
         <div class="sponsor-card">
-          <img src="/img/image23.jpg" alt="Patrocinador 23" class="sponsor-logo1" />
+          <img src="/img/image23.jpg" alt="Facultad de Educación" class="sponsor-logo1" />
         </div>
         <div class="sponsor-card">
-          <img src="/img/image24.jpg" alt="Patrocinador 23" class="sponsor-logo1" />
+          <img src="/img/image24.jpg" alt="La fábrica de palabras" class="sponsor-logo1" />
         </div>
         <div class="sponsor-card">
-          <img src="/img/img25.png" alt="Patrocinador 23" class="sponsor-logo1" />
+          <img src="/img/img25.png" alt="Medel" class="sponsor-logo1" />
         </div>
         <div class="sponsor-card">
-          <img src="/img/image26.png" alt="Patrocinador 23" class="sponsor-logo1" />
+          <img src="/img/image26.png" alt="Advance Bionics" class="sponsor-logo1" />
         </div>
         <div class="sponsor-card">
-          <img src="/img/img27.svg" alt="Patrocinador 23" class="sponsor-logo1" />
+          <img src="/img/img27.svg" alt="ulpgc" class="sponsor-logo1" />
         </div>
       </div>
     </div>
@@ -89,5 +117,11 @@ import DefaultLayout from '../layouts/DefaultLayout.astro';
     object-fit: contain;
     display: block;
     margin: 0 auto;
+  }
+
+  @media (min-width: 768px) {
+    .sponsor-logo-large {
+      max-width: 600px;
+    }
   }
 </style>
