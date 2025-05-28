@@ -53,8 +53,8 @@ import { SkipLink } from 'accessible-astro-components'
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
     z-index: 1000;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 12px;    
+    padding-bottom: 4px;  
   }
 
   header.animated-header.scrolled {
@@ -79,7 +79,6 @@ import { SkipLink } from 'accessible-astro-components'
     color: #7604b7;
   }
 
-  // Fondo más opaco cuando el menú está abierto en móvil
   @media (max-width: 900px) {
     header.animated-header.menu-open {
       background-color: rgba(255, 255, 255, 0.98) !important;
@@ -89,7 +88,6 @@ import { SkipLink } from 'accessible-astro-components'
 </style>
 
 <script>
-  // Añade la clase menu-open al header cuando el menú esté abierto (ajusta según tu lógica de menú)
   if (typeof window !== 'undefined') {
     const nav = document.querySelector('nav');
     const header = document.querySelector('header');
