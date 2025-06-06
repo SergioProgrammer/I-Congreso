@@ -4,44 +4,50 @@ import DefaultLayout from '../layouts/DefaultLayout.astro';
 <DefaultLayout title="Contribuciones">
   <section class="inscription-section bg-gradient-to-b from-purple-900 to-purple-800 py-16 mt-36">
     <div class="container mx-auto px-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white shadow-2xl rounded-2xl p-8 border border-purple-200">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start bg-white shadow-2xl rounded-2xl p-8 border border-purple-200">
 
-        <!-- Información de matriculación -->
+        <!-- Información de matriculación y enlaces útiles -->
         <div>
-          <h2 class="text-4xl font-bold text-black text-center mb-6">¿Cómo realizar la matrícula?</h2>
+          <!-- Enlaces directos de inscripción (más separados y claros) -->
+          <h3 class="text-2xl font-semibold text-purple-900 mb-6 mt-2 text-center">Enlaces directos de inscripción</h3>
+          <div class="flex flex-col gap-6 mb-10">
+            <div class="bg-purple-40 rounded-lg p-4 shadow text-center">
+              <div class="font-bold text-purple-900 mb-1 text-xl">Congreso presencial y online</div>
+              <a
+                href="https://sede.fg.ull.es/es/curso/detalle?code=a25030175&name=i-congreso-internacional-sordera-discapacidad-auditiva-y-sordoceguera-avances-retos-y-futuro-1st-international-congress-on-deafness-hearing-disability"
+                target="_blank"
+                class="text-purple-700 hover:underline font-semibold text-lg"
+              >
+                Inscripción al I Congreso Internacional Sordera, Discapacidad Auditiva y Sordoceguera
+              </a>
+            </div>
+            <div class="bg-purple-40 rounded-lg p-4 shadow text-center">
+              <div class="font-bold text-purple-900 mb-1 text-xl">Taller presencial: Fisioterapia</div>
+              <a
+                href="https://sede.fg.ull.es/es/curso/detalle?code=a25030179&name=taller-el-papel-de-la-fisioterapia-en-la-recuperacion-funcional-de-personas-con-discapacidad-auditiva-abordaje-del-vertigo-mareo-y-equilibrio"
+                target="_blank"
+                class="text-purple-700 hover:underline font-semibold text-lg"
+              >
+                Inscripción al Taller: El papel de la Fisioterapia en la recuperación funcional de personas con discapacidad auditiva
+              </a>
+            </div>
+            <div class="bg-purple-40 rounded-lg p-4 shadow text-center">
+              <div class="font-bold text-purple-900 mb-1 text-xl">Taller presencial: Mejora vocal</div>
+              <a
+                href="https://sede.fg.ull.es/es/curso/detalle?code=a25030180&name=taller-practico-de-la-mejora-vocalº"
+                target="_blank"
+                class="text-purple-700 hover:underline font-semibold text-lg"
+              >
+                Inscripción al Taller práctico de la mejora vocal
+              </a>
+            </div>
+          </div>
+
           <div class="bg-white p-6 rounded-lg shadow-inner mt-6">
             <ol class="list-decimal pl-9 text-black space-y-4 text-lg">
+              <!-- ...pasos de matrícula... -->
               <li>
-                <b>Presencialmente:</b> De lunes a viernes de 9:00 a 14:00 y lunes y martes de 16:30 a 19:00, en la Secretaría de la FGULL:<br/>
-                Avenida de la Trinidad, 61. Aulario de la Torre Profesor Agustín Arévalo, planta 0. Campus Central de la Universidad de La Laguna. CP. 38071 La Laguna. Tenerife, Islas Canarias.<br/>
-                Tel: <a href="tel:+34922319200" class="text-purple-700 hover:underline">+34 922 319200</a><br/>
-                Fax: +34 922 319197<br/>
-                E-mail: <a href="mailto:secretaria@fg.ull.es" class="text-purple-700 hover:underline">secretaria@fg.ull.es</a><br/>
-                Web: <a href="https://www.fg.ull.es" target="_blank" class="text-purple-700 hover:underline">www.fg.ull.es</a>
-              </li>
-              <li>
-                <b>Online:</b> A través del Portal Servicios:<br/>
-                <a href="https://sede.fg.ull.es/servicios/" target="_blank" class="text-purple-700 hover:underline">https://sede.fg.ull.es/servicios/</a>
-              </li>
-              <li>
-                <b>Pago de la matrícula:</b>
-                <ul class="list-disc pl-6 mt-2">
-                  <li>
-                    <b>Pago online seguro con tarjeta:</b>
-                    <a href="https://sede.fg.ull.es/servicios/PagoOnline.aspx?ref=160006424976&amp;am=3.400,00&amp;lang=2" target="_blank" class="text-purple-700 hover:underline">Pagar online</a>
-                  </li>
-                  <li>
-                    <b>Otras formas de pago:</b>
-                    <ul class="list-disc pl-6">
-                      <li>Con tarjeta en el Portal Servicios: <a href="https://sede.fg.ull.es" target="_blank" class="text-purple-700 hover:underline">https://sede.fg.ull.es</a></li>
-                      <li>En la secretaría de la Fundación</li>
-                      <li>A través de entidades bancarias con convenio. Más información: <a href="https://www.fg.ull.es/pagos" target="_blank" class="text-purple-700 hover:underline">www.fg.ull.es/pagos</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                Una vez realizado el abono usted queda efectivamente matriculado, por lo que <b>NO tiene que volver a pasar por nuestras instalaciones</b>. Si no realiza el abono en el tiempo estipulado, se anulará su matrícula.
+                Una vez realizado el abono usted queda efectivamente matriculado. Si no realiza el abono en el tiempo estipulado, se anulará su matrícula.
               </li>
               <li>
                 Si el período de matrícula ha finalizado y está interesado en el Congreso, contacte con la Secretaría de la Fundación para recibir instrucciones.
@@ -49,40 +55,26 @@ import DefaultLayout from '../layouts/DefaultLayout.astro';
             </ol>
           </div>
 
-          <!-- Enlaces directos de inscripción -->
-          <h3 class="text-4xl font-semibold text-black mb-4 mt-8 text-center">Enlaces directos de inscripción</h3>
+          <!-- Contacto y enlaces útiles centrados -->
+          <h3 class="text-2xl font-semibold text-purple-900 mb-4 mt-8 text-center">Contacto y enlaces útiles</h3>
           <ul class="text-black text-lg space-y-2 text-center mb-4">
             <li>
-              <a
-                href="https://sede.fg.ull.es/es/curso/detalle?code=a25030175&name=i-congreso-internacional-sordera-discapacidad-auditiva-y-sordoceguera-avances-retos-y-futuro-1st-international-congress-on-deafness-hearing-disability"
-                target="_blank"
-                class="text-purple-700 hover:underline font-semibold"
-              >
-                I Congreso Internacional Sordera, Discapacidad Auditiva y Sordoceguera: Avances, Retos y Futuro
-              </a>
+              <b>Secretaría FGULL</b><br/>
+              <a href="mailto:secretaria@fg.ull.es" class="text-purple-700 hover:underline">secretaria@fg.ull.es</a>
             </li>
             <li>
-              <a
-                href="https://sede.fg.ull.es/es/curso/detalle?code=a25030179&name=taller-el-papel-de-la-fisioterapia-en-la-recuperacion-funcional-de-personas-con-discapacidad-auditiva-abordaje-del-vertigo-mareo-y-equilibrio"
-                target="_blank"
-                class="text-purple-700 hover:underline font-semibold"
-              >
-                Taller: El papel de la Fisioterapia en la recuperación funcional de personas con discapacidad auditiva. Abordaje del vértigo, mareo y equilibrio
-              </a>
+              <a href="https://www.fg.ull.es" target="_blank" class="text-purple-700 hover:underline">www.fg.ull.es</a>
             </li>
             <li>
-              <a
-                href="https://sede.fg.ull.es/es/curso/detalle?code=a25030180&name=taller-practico-de-la-mejora-vocalº"
-                target="_blank"
-                class="text-purple-700 hover:underline font-semibold"
-              >
-                Taller práctico de la mejora vocal
-              </a>
+              <a href="https://sede.fg.ull.es/servicios/" target="_blank" class="text-purple-700 hover:underline">Portal Servicios</a>
+            </li>
+            <li>
+              <a href="https://www.fg.ull.es/pagos" target="_blank" class="text-purple-700 hover:underline">Información sobre pagos</a>
             </li>
           </ul>
         </div>
 
-        <!-- Contacto y enlaces útiles y tablas de precios detallados -->
+        <!-- Tablas de precios detallados -->
         <div class="flex flex-col items-center w-full">
 
           <!-- Tabla de precios de matrícula del Congreso - PRESENCIAL -->
@@ -182,22 +174,6 @@ import DefaultLayout from '../layouts/DefaultLayout.astro';
           </div>
           <p class="block md:hidden text-xs text-purple-700 text-center mb-6">Desliza para ver más precios</p>
 
-          <h3 class="text-2xl font-semibold text-purple-900 mb-4 mt-8">Contacto y enlaces útiles</h3>
-          <ul class="text-black text-lg space-y-2 text-center mb-4">
-            <li>
-              <b>Secretaría FGULL</b><br/>
-              <a href="mailto:secretaria@fg.ull.es" class="text-purple-700 hover:underline">secretaria@fg.ull.es</a>
-            </li>
-            <li>
-              <a href="https://www.fg.ull.es" target="_blank" class="text-purple-700 hover:underline">www.fg.ull.es</a>
-            </li>
-            <li>
-              <a href="https://sede.fg.ull.es/servicios/" target="_blank" class="text-purple-700 hover:underline">Portal Servicios</a>
-            </li>
-            <li>
-              <a href="https://www.fg.ull.es/pagos" target="_blank" class="text-purple-700 hover:underline">Información sobre pagos</a>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
