@@ -28,7 +28,7 @@ const colaboradores = [
 <DefaultLayout title="Colaboradores">
   <section class="my-24 mt-36">
     <div class="container">
-      <!-- Organiza y Financia  -->
+       <!-- Organiza y Financia  -->
       <div class="flex flex-col md:flex-row justify-center items-start gap-12 mb-12">
         <!-- Organiza -->
         <div class="text-center w-full md:w-1/2">
@@ -36,14 +36,23 @@ const colaboradores = [
           <div class="sponsor-card mx-auto max-w-[500px]">
             <img src="/img/image22.svg" alt="Cátedra de investigación e innovación en discapacidad auditiva y accesibilidad" class="sponsor-logo-large"/>
           </div>
+          <!-- Financia SOLO en escritorio -->
+            <div class="hidden md:flex flex-row justify-center items-center gap-6 mt-8">
+            <div class="sponsor-card max-w-[300px]">
+              <img src="/img/image11.png" alt="consejería insular de acción social,inclusión, voluntariado y participación ciudadana" class="sponsor-logo-large"/>
+            </div>
+            <div class="sponsor-card max-w-[235px]">
+              <img src="/img/img33.png" alt="consejería insular de acción social,inclusión, voluntariado y participación ciudadana" class="sponsor-logo-large"/>
+            </div>
+          </div>
         </div>
-        <!-- Financia -->
-        <div class="text-center w-full md:w-1/2">
-          <h2 class="text-4xl font-semibold mb-4">Financia</h2>
+        <!-- Financia SOLO en mobile -->
+        <div class="text-center w-full md:hidden mt-8">
+          <h2 class="text-4xl font-semibold mb-4">Financian</h2>
           <div class="sponsor-card mx-auto max-w-[500px]">
             <img src="/img/image11.png" alt="consejería insular de acción social,inclusión, voluntariado y participación ciudadana" class="sponsor-logo-large"/>
           </div>
-          <div class="sponsor-card mx-auto max-w-[500px]">
+          <div class="sponsor-card mx-auto max-w-[400px]">
             <img src="/img/img33.png" alt="consejería insular de acción social,inclusión, voluntariado y participación ciudadana" class="sponsor-logo-large"/>
           </div>
         </div>
