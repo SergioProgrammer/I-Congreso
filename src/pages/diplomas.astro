@@ -1,0 +1,85 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+---
+
+<DefaultLayout title="Generador de Diplomas">
+  <section class="inscription-section bg-gradient-to-b from-purple-900 to-purple-800 py-16 mt-36">
+    <div class="container mx-auto px-6">
+      <div class="bg-white shadow-2xl rounded-2xl p-8 border border-purple-200">
+
+        <h2 class="text-4xl font-bold text-purple-900 text-center mb-6">Generador de Diplomas</h2>
+        <p class="text-lg text-black mb-6 text-center">
+          Sube un <b>Excel, CSV o TXT</b> con nombres y títulos de comunicación, y el <b>diploma base</b> en formato <b>JPG/PNG/PDF</b>. 
+          Obtendrás un <b>ZIP</b> con todos los certificados listos para firmar.
+        </p>
+
+        <!-- Formulario -->
+        <form id="diplomaForm" class="flex flex-col space-y-6" enctype="multipart/form-data">
+          <div>
+            <label class="block text-purple-900 font-semibold mb-2">Archivo Excel/CSV/TXT</label>
+            <input type="file" name="excel" accept=".xlsx,.xls,.csv,.txt" required class="w-full border border-purple-300 rounded-lg p-3" />
+          </div>
+          
+          <div>
+            <label class="block text-purple-900 font-semibold mb-2">Plantilla de Diploma</label>
+            <input type="file" name="plantilla" accept=".jpg,.jpeg,.png,.pdf" required class="w-full border border-purple-300 rounded-lg p-3" />
+          </div>
+
+          <button
+            type="submit"
+            class="bg-purple-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-purple-800 hover:shadow-2xl transition"
+          >
+            Generar Diplomas
+          </button>
+        </form>
+
+        <!-- Resultado -->
+        <p id="statusMsg" class="text-center text-lg mt-6 text-purple-900 font-semibold"></p>
+      </div>
+    </div>
+  </section>
+
+  <script lang="ts">
+  const form = document.getElementById("diplomaForm") as HTMLFormElement;
+  const statusMsg = document.getElementById("statusMsg") as HTMLParagraphElement;
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    statusMsg.textContent = "⏳ Generando diplomas...";
+    statusMsg.className = "text-center text-lg mt-6 font-semibold text-purple-700";
+
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch("/api/generar-diplomas", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (!res.ok) {
+        statusMsg.textContent = "❌ Error al generar diplomas";
+        statusMsg.className = "text-center text-lg mt-6 font-semibold text-red-600";
+        return;
+      }
+
+      const blob = await res.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "diplomas.zip";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      window.URL.revokeObjectURL(url);
+
+      statusMsg.textContent = "✅ Diplomas generados con éxito. Se ha descargado el ZIP.";
+      statusMsg.className = "text-center text-lg mt-6 font-semibold text-green-600";
+    } catch (error) {
+      console.error(error);
+      statusMsg.textContent = "❌ Error de conexión con el servidor.";
+      statusMsg.className = "text-center text-lg mt-6 font-semibold text-red-600";
+    }
+  });
+</script>
+
+</DefaultLayout>
