@@ -14,6 +14,7 @@
   "type": "module",
   "dependencies": {
     "@astrojs/react": "^4.2.2",
+    "@astrojs/vercel": "^8.2.8",
     "@stripe/stripe-js": "^6.0.0",
     "accessible-astro-components": "^4.1.0",
     "adm-zip": "^0.5.16",
